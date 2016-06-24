@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D70235BB1D1D0746001FD0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235BA1D1D0746001FD0FE /* AppDelegate.swift */; };
+		D70235BD1D1D0746001FD0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235BC1D1D0746001FD0FE /* ViewController.swift */; };
+		D70235C01D1D0746001FD0FE /* ERP_Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D70235BE1D1D0746001FD0FE /* ERP_Models.xcdatamodeld */; };
+		D70235C21D1D0746001FD0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70235C11D1D0746001FD0FE /* Assets.xcassets */; };
+		D70235C51D1D0746001FD0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70235C31D1D0746001FD0FE /* Main.storyboard */; };
+		D70235D01D1D0746001FD0FE /* ERP_ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235CF1D1D0746001FD0FE /* ERP_ModelsTests.swift */; };
+		D70235DB1D1D0746001FD0FE /* ERP_ModelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235DA1D1D0746001FD0FE /* ERP_ModelsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D70235CC1D1D0746001FD0FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D70235AF1D1D0746001FD0FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D70235B61D1D0746001FD0FE;
+			remoteInfo = ERP_Models;
+		};
+		D70235D71D1D0746001FD0FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D70235AF1D1D0746001FD0FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D70235B61D1D0746001FD0FE;
+			remoteInfo = ERP_Models;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D70235B71D1D0746001FD0FE /* ERP_Models.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERP_Models.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70235BA1D1D0746001FD0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D70235BC1D1D0746001FD0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D70235BF1D1D0746001FD0FE /* ERP_Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ERP_Models.xcdatamodel; sourceTree = "<group>"; };
+		D70235C11D1D0746001FD0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D70235C41D1D0746001FD0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D70235C61D1D0746001FD0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D70235CB1D1D0746001FD0FE /* ERP_ModelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERP_ModelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70235CF1D1D0746001FD0FE /* ERP_ModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERP_ModelsTests.swift; sourceTree = "<group>"; };
+		D70235D11D1D0746001FD0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D70235D61D1D0746001FD0FE /* ERP_ModelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERP_ModelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70235DA1D1D0746001FD0FE /* ERP_ModelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERP_ModelsUITests.swift; sourceTree = "<group>"; };
+		D70235DC1D1D0746001FD0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D70235B41D1D0746001FD0FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D70235C81D1D0746001FD0FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D70235D31D1D0746001FD0FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D70235AE1D1D0746001FD0FE = {
+			isa = PBXGroup;
+			children = (
+				D70235B91D1D0746001FD0FE /* ERP_Models */,
+				D70235CE1D1D0746001FD0FE /* ERP_ModelsTests */,
+				D70235D91D1D0746001FD0FE /* ERP_ModelsUITests */,
+				D70235B81D1D0746001FD0FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D70235B81D1D0746001FD0FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D70235B71D1D0746001FD0FE /* ERP_Models.app */,
+				D70235CB1D1D0746001FD0FE /* ERP_ModelsTests.xctest */,
+				D70235D61D1D0746001FD0FE /* ERP_ModelsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D70235B91D1D0746001FD0FE /* ERP_Models */ = {
+			isa = PBXGroup;
+			children = (
+				D70235BA1D1D0746001FD0FE /* AppDelegate.swift */,
+				D70235BC1D1D0746001FD0FE /* ViewController.swift */,
+				D70235C11D1D0746001FD0FE /* Assets.xcassets */,
+				D70235C31D1D0746001FD0FE /* Main.storyboard */,
+				D70235C61D1D0746001FD0FE /* Info.plist */,
+				D70235BE1D1D0746001FD0FE /* ERP_Models.xcdatamodeld */,
+			);
+			path = ERP_Models;
+			sourceTree = "<group>";
+		};
+		D70235CE1D1D0746001FD0FE /* ERP_ModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D70235CF1D1D0746001FD0FE /* ERP_ModelsTests.swift */,
+				D70235D11D1D0746001FD0FE /* Info.plist */,
+			);
+			path = ERP_ModelsTests;
+			sourceTree = "<group>";
+		};
+		D70235D91D1D0746001FD0FE /* ERP_ModelsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D70235DA1D1D0746001FD0FE /* ERP_ModelsUITests.swift */,
+				D70235DC1D1D0746001FD0FE /* Info.plist */,
+			);
+			path = ERP_ModelsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D70235B61D1D0746001FD0FE /* ERP_Models */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D70235DF1D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_Models" */;
+			buildPhases = (
+				D70235B31D1D0746001FD0FE /* Sources */,
+				D70235B41D1D0746001FD0FE /* Frameworks */,
+				D70235B51D1D0746001FD0FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ERP_Models;
+			productName = ERP_Models;
+			productReference = D70235B71D1D0746001FD0FE /* ERP_Models.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D70235CA1D1D0746001FD0FE /* ERP_ModelsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D70235E21D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_ModelsTests" */;
+			buildPhases = (
+				D70235C71D1D0746001FD0FE /* Sources */,
+				D70235C81D1D0746001FD0FE /* Frameworks */,
+				D70235C91D1D0746001FD0FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D70235CD1D1D0746001FD0FE /* PBXTargetDependency */,
+			);
+			name = ERP_ModelsTests;
+			productName = ERP_ModelsTests;
+			productReference = D70235CB1D1D0746001FD0FE /* ERP_ModelsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D70235D51D1D0746001FD0FE /* ERP_ModelsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D70235E51D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_ModelsUITests" */;
+			buildPhases = (
+				D70235D21D1D0746001FD0FE /* Sources */,
+				D70235D31D1D0746001FD0FE /* Frameworks */,
+				D70235D41D1D0746001FD0FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D70235D81D1D0746001FD0FE /* PBXTargetDependency */,
+			);
+			name = ERP_ModelsUITests;
+			productName = ERP_ModelsUITests;
+			productReference = D70235D61D1D0746001FD0FE /* ERP_ModelsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D70235AF1D1D0746001FD0FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Hossein Azizi";
+				TargetAttributes = {
+					D70235B61D1D0746001FD0FE = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D70235CA1D1D0746001FD0FE = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D70235B61D1D0746001FD0FE;
+					};
+					D70235D51D1D0746001FD0FE = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D70235B61D1D0746001FD0FE;
+					};
+				};
+			};
+			buildConfigurationList = D70235B21D1D0746001FD0FE /* Build configuration list for PBXProject "ERP_Models" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D70235AE1D1D0746001FD0FE;
+			productRefGroup = D70235B81D1D0746001FD0FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D70235B61D1D0746001FD0FE /* ERP_Models */,
+				D70235CA1D1D0746001FD0FE /* ERP_ModelsTests */,
+				D70235D51D1D0746001FD0FE /* ERP_ModelsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D70235B51D1D0746001FD0FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70235C21D1D0746001FD0FE /* Assets.xcassets in Resources */,
+				D70235C51D1D0746001FD0FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D70235C91D1D0746001FD0FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D70235D41D1D0746001FD0FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D70235B31D1D0746001FD0FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70235C01D1D0746001FD0FE /* ERP_Models.xcdatamodeld in Sources */,
+				D70235BD1D1D0746001FD0FE /* ViewController.swift in Sources */,
+				D70235BB1D1D0746001FD0FE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D70235C71D1D0746001FD0FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70235D01D1D0746001FD0FE /* ERP_ModelsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D70235D21D1D0746001FD0FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70235DB1D1D0746001FD0FE /* ERP_ModelsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D70235CD1D1D0746001FD0FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D70235B61D1D0746001FD0FE /* ERP_Models */;
+			targetProxy = D70235CC1D1D0746001FD0FE /* PBXContainerItemProxy */;
+		};
+		D70235D81D1D0746001FD0FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D70235B61D1D0746001FD0FE /* ERP_Models */;
+			targetProxy = D70235D71D1D0746001FD0FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D70235C31D1D0746001FD0FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D70235C41D1D0746001FD0FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D70235DD1D1D0746001FD0FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D70235DE1D1D0746001FD0FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D70235E01D1D0746001FD0FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ERP_Models/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Metanoia.ERP-Models";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D70235E11D1D0746001FD0FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ERP_Models/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Metanoia.ERP-Models";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D70235E31D1D0746001FD0FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ERP_ModelsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Metanoia.ERP-ModelsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ERP_Models.app/Contents/MacOS/ERP_Models";
+			};
+			name = Debug;
+		};
+		D70235E41D1D0746001FD0FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ERP_ModelsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Metanoia.ERP-ModelsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ERP_Models.app/Contents/MacOS/ERP_Models";
+			};
+			name = Release;
+		};
+		D70235E61D1D0746001FD0FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ERP_ModelsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Metanoia.ERP-ModelsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ERP_Models;
+			};
+			name = Debug;
+		};
+		D70235E71D1D0746001FD0FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ERP_ModelsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Metanoia.ERP-ModelsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ERP_Models;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D70235B21D1D0746001FD0FE /* Build configuration list for PBXProject "ERP_Models" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D70235DD1D1D0746001FD0FE /* Debug */,
+				D70235DE1D1D0746001FD0FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D70235DF1D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_Models" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D70235E01D1D0746001FD0FE /* Debug */,
+				D70235E11D1D0746001FD0FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D70235E21D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_ModelsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D70235E31D1D0746001FD0FE /* Debug */,
+				D70235E41D1D0746001FD0FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D70235E51D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_ModelsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D70235E61D1D0746001FD0FE /* Debug */,
+				D70235E71D1D0746001FD0FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D70235BE1D1D0746001FD0FE /* ERP_Models.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D70235BF1D1D0746001FD0FE /* ERP_Models.xcdatamodel */,
+			);
+			currentVersion = D70235BF1D1D0746001FD0FE /* ERP_Models.xcdatamodel */;
+			path = ERP_Models.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D70235AF1D1D0746001FD0FE /* Project object */;
+}
