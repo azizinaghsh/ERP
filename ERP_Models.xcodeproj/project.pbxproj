@@ -14,6 +14,15 @@
 		D70235C51D1D0746001FD0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70235C31D1D0746001FD0FE /* Main.storyboard */; };
 		D70235D01D1D0746001FD0FE /* ERP_ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235CF1D1D0746001FD0FE /* ERP_ModelsTests.swift */; };
 		D70235DB1D1D0746001FD0FE /* ERP_ModelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235DA1D1D0746001FD0FE /* ERP_ModelsUITests.swift */; };
+		D70235E91D1D07B2001FD0FE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235E81D1D07B2001FD0FE /* Resource.swift */; };
+		D70235EB1D1D08ED001FD0FE /* ProjectHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235EA1D1D08ED001FD0FE /* ProjectHierarchy.swift */; };
+		D70235ED1D1D0EF0001FD0FE /* Allocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235EC1D1D0EF0001FD0FE /* Allocation.swift */; };
+		D70235F11D1D271A001FD0FE /* Requirment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235F01D1D271A001FD0FE /* Requirment.swift */; };
+		D70235F31D1D2922001FD0FE /* ResourceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235F21D1D2922001FD0FE /* ResourceCatalog.swift */; };
+		D70235F51D1D4DD4001FD0FE /* FinancialResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235F41D1D4DD4001FD0FE /* FinancialResource.swift */; };
+		D70235F71D1D4DF2001FD0FE /* InformationResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235F61D1D4DF2001FD0FE /* InformationResource.swift */; };
+		D70235F91D1D4E03001FD0FE /* PhysicalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235F81D1D4E03001FD0FE /* PhysicalResource.swift */; };
+		D70235FB1D1D4E2C001FD0FE /* HumanResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235FA1D1D4E2C001FD0FE /* HumanResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,15 @@
 		D70235D61D1D0746001FD0FE /* ERP_ModelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERP_ModelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70235DA1D1D0746001FD0FE /* ERP_ModelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERP_ModelsUITests.swift; sourceTree = "<group>"; };
 		D70235DC1D1D0746001FD0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D70235E81D1D07B2001FD0FE /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Models/Resource.swift; sourceTree = "<group>"; };
+		D70235EA1D1D08ED001FD0FE /* ProjectHierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectHierarchy.swift; path = "Models/Project Sub-System/ProjectHierarchy.swift"; sourceTree = "<group>"; };
+		D70235EC1D1D0EF0001FD0FE /* Allocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Allocation.swift; path = "Models/Project Sub-System/Allocation.swift"; sourceTree = "<group>"; };
+		D70235F01D1D271A001FD0FE /* Requirment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requirment.swift; sourceTree = "<group>"; };
+		D70235F21D1D2922001FD0FE /* ResourceCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceCatalog.swift; sourceTree = "<group>"; };
+		D70235F41D1D4DD4001FD0FE /* FinancialResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinancialResource.swift; path = "Models/Resource Sub-System/FinancialResource.swift"; sourceTree = "<group>"; };
+		D70235F61D1D4DF2001FD0FE /* InformationResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationResource.swift; path = "Models/Resource Sub-System/InformationResource.swift"; sourceTree = "<group>"; };
+		D70235F81D1D4E03001FD0FE /* PhysicalResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhysicalResource.swift; path = "Models/Resource Sub-System/PhysicalResource.swift"; sourceTree = "<group>"; };
+		D70235FA1D1D4E2C001FD0FE /* HumanResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumanResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +115,8 @@
 		D70235B91D1D0746001FD0FE /* ERP_Models */ = {
 			isa = PBXGroup;
 			children = (
+				D70235EF1D1D1952001FD0FE /* Resource Sub-System */,
+				D70235EE1D1D0EF4001FD0FE /* Project Sub-System */,
 				D70235BA1D1D0746001FD0FE /* AppDelegate.swift */,
 				D70235BC1D1D0746001FD0FE /* ViewController.swift */,
 				D70235C11D1D0746001FD0FE /* Assets.xcassets */,
@@ -123,6 +143,29 @@
 				D70235DC1D1D0746001FD0FE /* Info.plist */,
 			);
 			path = ERP_ModelsUITests;
+			sourceTree = "<group>";
+		};
+		D70235EE1D1D0EF4001FD0FE /* Project Sub-System */ = {
+			isa = PBXGroup;
+			children = (
+				D70235F01D1D271A001FD0FE /* Requirment.swift */,
+				D70235EA1D1D08ED001FD0FE /* ProjectHierarchy.swift */,
+				D70235EC1D1D0EF0001FD0FE /* Allocation.swift */,
+			);
+			name = "Project Sub-System";
+			sourceTree = "<group>";
+		};
+		D70235EF1D1D1952001FD0FE /* Resource Sub-System */ = {
+			isa = PBXGroup;
+			children = (
+				D70235E81D1D07B2001FD0FE /* Resource.swift */,
+				D70235F21D1D2922001FD0FE /* ResourceCatalog.swift */,
+				D70235F41D1D4DD4001FD0FE /* FinancialResource.swift */,
+				D70235F81D1D4E03001FD0FE /* PhysicalResource.swift */,
+				D70235FA1D1D4E2C001FD0FE /* HumanResource.swift */,
+				D70235F61D1D4DF2001FD0FE /* InformationResource.swift */,
+			);
+			name = "Resource Sub-System";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,9 +298,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70235EB1D1D08ED001FD0FE /* ProjectHierarchy.swift in Sources */,
 				D70235C01D1D0746001FD0FE /* ERP_Models.xcdatamodeld in Sources */,
+				D70235E91D1D07B2001FD0FE /* Resource.swift in Sources */,
+				D70235F51D1D4DD4001FD0FE /* FinancialResource.swift in Sources */,
+				D70235F31D1D2922001FD0FE /* ResourceCatalog.swift in Sources */,
+				D70235ED1D1D0EF0001FD0FE /* Allocation.swift in Sources */,
+				D70235F91D1D4E03001FD0FE /* PhysicalResource.swift in Sources */,
 				D70235BD1D1D0746001FD0FE /* ViewController.swift in Sources */,
 				D70235BB1D1D0746001FD0FE /* AppDelegate.swift in Sources */,
+				D70235F71D1D4DF2001FD0FE /* InformationResource.swift in Sources */,
+				D70235F11D1D271A001FD0FE /* Requirment.swift in Sources */,
+				D70235FB1D1D4E2C001FD0FE /* HumanResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
