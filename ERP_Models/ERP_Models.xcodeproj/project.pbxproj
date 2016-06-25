@@ -23,6 +23,13 @@
 		D70235F71D1D4DF2001FD0FE /* InformationResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235F61D1D4DF2001FD0FE /* InformationResource.swift */; };
 		D70235F91D1D4E03001FD0FE /* PhysicalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235F81D1D4E03001FD0FE /* PhysicalResource.swift */; };
 		D70235FB1D1D4E2C001FD0FE /* HumanResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235FA1D1D4E2C001FD0FE /* HumanResource.swift */; };
+		D70419101D1EB23900C121E4 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D704190F1D1EB23900C121E4 /* Module.swift */; };
+		D70419121D1EB41400C121E4 /* Maintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70419111D1EB41400C121E4 /* Maintenance.swift */; };
+		D7141A891D1EC29900503607 /* ProjectResourceRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7141A881D1EC29900503607 /* ProjectResourceRelationship.swift */; };
+		D7141A8B1D1ED44300503607 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7141A8A1D1ED44300503607 /* NSDateExtension.swift */; };
+		D798FE7A1D1E68BC00ECA15B /* ProjectCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE791D1E68BC00ECA15B /* ProjectCatalog.swift */; };
+		D798FE7C1D1E68DC00ECA15B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE7B1D1E68DC00ECA15B /* Project.swift */; };
+		D798FE7E1D1E9BA300ECA15B /* QuantitativeResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE7D1D1E9BA300ECA15B /* QuantitativeResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +72,13 @@
 		D70235F61D1D4DF2001FD0FE /* InformationResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationResource.swift; path = "Models/Resource Sub-System/InformationResource.swift"; sourceTree = "<group>"; };
 		D70235F81D1D4E03001FD0FE /* PhysicalResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhysicalResource.swift; path = "Models/Resource Sub-System/PhysicalResource.swift"; sourceTree = "<group>"; };
 		D70235FA1D1D4E2C001FD0FE /* HumanResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumanResource.swift; sourceTree = "<group>"; };
+		D704190F1D1EB23900C121E4 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Module.swift; path = "Models/Resource Sub-System/Module.swift"; sourceTree = "<group>"; };
+		D70419111D1EB41400C121E4 /* Maintenance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Maintenance.swift; path = "Models/Resource Sub-System/Maintenance.swift"; sourceTree = "<group>"; };
+		D7141A881D1EC29900503607 /* ProjectResourceRelationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectResourceRelationship.swift; path = "../Models/Project Sub-System/ProjectResourceRelationship.swift"; sourceTree = "<group>"; };
+		D7141A8A1D1ED44300503607 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		D798FE791D1E68BC00ECA15B /* ProjectCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCatalog.swift; path = "../Models/Project Sub-System/ProjectCatalog.swift"; sourceTree = "<group>"; };
+		D798FE7B1D1E68DC00ECA15B /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = "Models/Project Sub-System/Project.swift"; sourceTree = "<group>"; };
+		D798FE7D1D1E9BA300ECA15B /* QuantitativeResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuantitativeResource.swift; path = "Models/Resource Sub-System/QuantitativeResource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +109,7 @@
 		D70235AE1D1D0746001FD0FE = {
 			isa = PBXGroup;
 			children = (
+				D7141A8A1D1ED44300503607 /* NSDateExtension.swift */,
 				D70235B91D1D0746001FD0FE /* ERP_Models */,
 				D70235CE1D1D0746001FD0FE /* ERP_ModelsTests */,
 				D70235D91D1D0746001FD0FE /* ERP_ModelsUITests */,
@@ -148,6 +163,9 @@
 		D70235EE1D1D0EF4001FD0FE /* Project Sub-System */ = {
 			isa = PBXGroup;
 			children = (
+				D7141A881D1EC29900503607 /* ProjectResourceRelationship.swift */,
+				D798FE7B1D1E68DC00ECA15B /* Project.swift */,
+				D798FE791D1E68BC00ECA15B /* ProjectCatalog.swift */,
 				D70235F01D1D271A001FD0FE /* Requirment.swift */,
 				D70235EA1D1D08ED001FD0FE /* ProjectHierarchy.swift */,
 				D70235EC1D1D0EF0001FD0FE /* Allocation.swift */,
@@ -159,11 +177,14 @@
 			isa = PBXGroup;
 			children = (
 				D70235E81D1D07B2001FD0FE /* Resource.swift */,
+				D798FE7D1D1E9BA300ECA15B /* QuantitativeResource.swift */,
 				D70235F21D1D2922001FD0FE /* ResourceCatalog.swift */,
 				D70235F41D1D4DD4001FD0FE /* FinancialResource.swift */,
 				D70235F81D1D4E03001FD0FE /* PhysicalResource.swift */,
 				D70235FA1D1D4E2C001FD0FE /* HumanResource.swift */,
 				D70235F61D1D4DF2001FD0FE /* InformationResource.swift */,
+				D704190F1D1EB23900C121E4 /* Module.swift */,
+				D70419111D1EB41400C121E4 /* Maintenance.swift */,
 			);
 			name = "Resource Sub-System";
 			sourceTree = "<group>";
@@ -299,14 +320,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70235EB1D1D08ED001FD0FE /* ProjectHierarchy.swift in Sources */,
+				D7141A891D1EC29900503607 /* ProjectResourceRelationship.swift in Sources */,
 				D70235C01D1D0746001FD0FE /* ERP_Models.xcdatamodeld in Sources */,
+				D70419101D1EB23900C121E4 /* Module.swift in Sources */,
+				D70419121D1EB41400C121E4 /* Maintenance.swift in Sources */,
+				D798FE7E1D1E9BA300ECA15B /* QuantitativeResource.swift in Sources */,
 				D70235E91D1D07B2001FD0FE /* Resource.swift in Sources */,
 				D70235F51D1D4DD4001FD0FE /* FinancialResource.swift in Sources */,
 				D70235F31D1D2922001FD0FE /* ResourceCatalog.swift in Sources */,
+				D798FE7C1D1E68DC00ECA15B /* Project.swift in Sources */,
 				D70235ED1D1D0EF0001FD0FE /* Allocation.swift in Sources */,
 				D70235F91D1D4E03001FD0FE /* PhysicalResource.swift in Sources */,
 				D70235BD1D1D0746001FD0FE /* ViewController.swift in Sources */,
+				D798FE7A1D1E68BC00ECA15B /* ProjectCatalog.swift in Sources */,
 				D70235BB1D1D0746001FD0FE /* AppDelegate.swift in Sources */,
+				D7141A8B1D1ED44300503607 /* NSDateExtension.swift in Sources */,
 				D70235F71D1D4DF2001FD0FE /* InformationResource.swift in Sources */,
 				D70235F11D1D271A001FD0FE /* Requirment.swift in Sources */,
 				D70235FB1D1D4E2C001FD0FE /* HumanResource.swift in Sources */,
@@ -531,6 +559,7 @@
 				D70235E11D1D0746001FD0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D70235E21D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_ModelsTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +568,7 @@
 				D70235E41D1D0746001FD0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D70235E51D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_ModelsUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +577,7 @@
 				D70235E71D1D0746001FD0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

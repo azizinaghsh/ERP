@@ -8,6 +8,8 @@
 
 import Cocoa
 
-class FinancialResource: Resource {
+class FinancialResource: QuantitativeResource
+{
+    
 
 }

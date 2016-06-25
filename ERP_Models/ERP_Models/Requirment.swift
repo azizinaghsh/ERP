@@ -8,24 +8,13 @@
 
 import Cocoa
 
-class Requirement: NSObject {
-
-    private let resource : Resource
-    private let project : ProjectHierarchy
-    private let createdAt : String
-    
-    init(resource : Resource, project : ProjectHierarchy)
-    {
-        self.resource = resource
-        self.project = project
-        createdAt = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-    }
+class Requirement: ProjectResourceRelationship {    
     
     func tryRequirement () -> Bool
     {
-        if let allocation = resource.allocateResource(project)
+        if let allocation = resource.allocateResource(to: projectHierarchy, withAmount: amount, estimatedUseTime: self.estimatedUseTime)
         {
-            project.allocateResource(allocation, requirement: self)
+            projectHierarchy.allocateResource(allocation, requirement: self)
             return true
         }
         return false

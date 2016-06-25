@@ -2,23 +2,15 @@
 
 import Cocoa
 
-class A : NSObject
-{
-        override init ()
-        {
-            
-    }
-    
-    static func TestType<T> (type : T.Type)
-    {
-        if (type is A)
-        {
-            print ("IS A")
-            return
-        }
-        print ("NOT A")
-    }
-}
-var B : A = A()
+var str = "Hello, playground"
 
-A.TestType(A.self)
+let date : NSDate = NSDate ()
+let dateString : String = NSDateFormatter.localizedStringFromDate(date, dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+let format : NSDateFormatter = NSDateFormatter ()
+
+let RFC3339DateFormatter = NSDateFormatter()
+//RFC3339DateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+RFC3339DateFormatter.dateStyle = .MediumStyle
+RFC3339DateFormatter.timeStyle = .ShortStyle
+
+let date2 = RFC3339DateFormatter.dateFromString(dateString)

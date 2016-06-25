@@ -10,34 +10,33 @@ import Cocoa
 
 class Resource: NSObject {
     
-
-    private var allocatedBy : ProjectHierarchy?
-    private var allocations : NSMutableArray
+    private var isAllocated : Bool
     private var category : String
-    private var isAvailable : Bool
+    var dateAdded : String
+    var dateRelease : String?
+    var dateEstimatedRelease : String?
+    {
+        if (estimatedTimeUse != nil)
         {
-        get
-        {
-            if (allocatedBy == nil)
-            {
-                return false
-            }
-            else
-            {
-                return true
-            }
+            //TODO
+            
         }
+        return nil
     }
     
-    override init ()
+    
+    var estimatedTimeUse : Int?
+    
+    init (category : String)
     {
-        allocations = NSMutableArray()
-        category = ""
+        isAllocated = false
+        dateAdded = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        self.category = category
     }
     
     func getIsAvailable () -> Bool
     {
-        return isAvailable
+        return !isAllocated
     }
     
     func getCategory () -> String
@@ -52,38 +51,34 @@ class Resource: NSObject {
     
     func getEstimatedRelease() -> String?
     {
-        if (isAvailable)
+        if (getIsAvailable())
         {
             return nil
         }
         else
         {
-            return (allocations.lastObject as! Allocation).allocationTime.endTime
+            return dateEstimatedRelease
         }
     }
     
-    func allocateResource (projectHierarchy : ProjectHierarchy) -> Allocation?
+    func allocateResource (to projectHierarchy : ProjectHierarchy, withAmount amount : Int? = nil, estimatedUseTime : Int) -> Allocation?
     {
-        if (!isAvailable)
+        if (!getIsAvailable())
         {
             return nil
         }
         else
         {
-            let newAllocation = Allocation (resource: self, projectHierarchy)
-            allocations.addObject(newAllocation)
-            allocatedBy = projectHierarchy
+            let newAllocation = Allocation (resource: self, projectHierarchy: projectHierarchy, amount: amount, estimatedUseTime: estimatedUseTime)
+            self.estimatedTimeUse = estimatedUseTime
+            isAllocated = true
             return newAllocation
         }
     }
     
-    func freeResource ()
+    func freeResource (fromAllocation allocation : Allocation)
     {
-        allocatedBy = nil
+        isAllocated = false;
     }
-    
-    func modifyCategory (category : String)
-    {
-        
-    }
+
 }

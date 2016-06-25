@@ -10,18 +10,26 @@ import Cocoa
 
 class ProjectHierarchy: NSObject {
     
-    private var currentAllocations : Array<Allocation> = []
-    private var allocations : Array<Allocation> = []
+    var currentAllocations : Array<Allocation> = []
+    var allocations : Array<Allocation> = []
     private var requirements : Array<Requirement> = []
+    var startDate, endDate : String?
     
-    override init ()
+    init (dateCreated : String? = nil)
     {
-        
+        if (dateCreated == nil)
+        {
+            self.startDate = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        }
+        else
+        {
+            self.startDate = dateCreated!
+        }
     }
     
-    func createRequirement (resource : Resource) -> Requirement
+    func createRequirement (forResource resource : Resource, withAmount amount : Int?, estimatedToBeUsed estimate:Int) -> Requirement
     {
-        let requirement = Requirement(resource : resource, project : self)
+        let requirement = Requirement(resource : resource, projectHierarchy : self, amount: amount, estimatedUseTime: estimate)
         requirements.append(requirement)
         return requirement
     }
@@ -30,21 +38,14 @@ class ProjectHierarchy: NSObject {
     {
         currentAllocations.append(allocation)
         allocations.append(allocation)
-        requirements.removeAtIndex(requirements.indexOf(requirement)!)
+        
         //TODO: notify project manager
     }
     
     func freeResource (allocatedResource : Allocation)
     {
-        for allocation in currentAllocations
-        {
-            if (allocation == allocatedResource)
-            {
-                allocation.freeResource ()
-                currentAllocations.removeAtIndex(allocations.indexOf(allocation)!)
-                break
-            }
-        }
+        allocatedResource.freeResource ()
+        currentAllocations.removeAtIndex(currentAllocations.indexOf(allocatedResource)!)
     }
     
     func getResources<T where T:Resource> (type : T.Type, onlyCurrent : Bool = false) -> [Allocation]
@@ -61,5 +62,21 @@ class ProjectHierarchy: NSObject {
             }
         }
         return requestedAllocations
+    }
+    
+    func checkRequirements ()
+    {
+        var toBeRemoved : [Requirement] = []
+        for requirement in requirements
+        {
+            if (requirement.tryRequirement())
+            {
+                toBeRemoved.append(requirement)
+            }
+        }
+        for requirement in toBeRemoved
+        {
+            requirements.removeAtIndex(requirements.indexOf(requirement)!)
+        }
     }
 }

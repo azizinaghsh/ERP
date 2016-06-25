@@ -8,6 +8,7 @@
 
 import Cocoa
 
-class HumanResource: Resource {
+class HumanResource: QuantitativeResource
+{
 
 }

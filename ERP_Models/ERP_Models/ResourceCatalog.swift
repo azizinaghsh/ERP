@@ -12,18 +12,16 @@ class ResourceCatalog: NSObject {
     
     private var resources : Array<Resource> = []
     static var instance : ResourceCatalog!
-    private var categories : (humanResourceCategories:Array<String>,
-    financialResourceCategories:Array<String>,
-    informationResourceCategories:Array<String>,
-    physicalResourceCategories:Array<String>)
+
+    private var categories : [String : [String]]
     
     
-    override init ()
+    private override init ()
     {
-        categories = (humanResourceCategories :       ["Programmer", "Manager"],
-                      financialResourceCategories :   ["Property", "Money", "Sponser"],
-                      informationResourceCategories : ["Software Module", "Document"],
-                      physicalResourceCategories :    ["Computer","Room","Desk"])
+        categories = [HumanResource.className(): ["Programmer", "Manager"],
+                      FinancialResource.className() : ["Property", "Money", "Sponser"],
+                      InformationResource.className() : ["Software Module", "Document"],
+                      PhysicalResource.className() : ["PC","Room","Desk","iMac"]]
     }
     
     static func getInstance () -> ResourceCatalog
@@ -40,43 +38,24 @@ class ResourceCatalog: NSObject {
         return self.resources
     }
     
-    func addCategory<T where T:Resource>(type : T.Type, newCategory : String)
+    
+    func addCategory(resourceClassName : String, newCategory : String)
     {
-        if (type == FinancialResource.self)
-        {
-            categories.financialResourceCategories.append(newCategory)
-        }
-        if (type == HumanResource.self)
-        {
-            categories.humanResourceCategories.append(newCategory)
-        }
-        if (type == PhysicalResource.self)
-        {
-            categories.physicalResourceCategories.append(newCategory)
-        }
-        if (type == InformationResource.self)
-        {
-            categories.informationResourceCategories.append(newCategory)
-        }
+        categories[resourceClassName]?.append(newCategory)
     }
     
-    func removeCategory<T where T:Resource>(type : T.Type, category : String)
+    func removeCategory(resourceClassName : String, category : String) -> Bool
     {
-        if (type == FinancialResource.self && categories.financialResourceCategories.contains(category))
+        if let index : Int = categories[resourceClassName]?.indexOf((category))
         {
-            categories.financialResourceCategories.removeAtIndex(categories.financialResourceCategories.indexOf(category)!)
+            categories[resourceClassName]?.removeAtIndex(index)
+            return true
         }
-        if (type == HumanResource.self && categories.humanResourceCategories.contains(category))
-        {
-            categories.financialResourceCategories.removeAtIndex(categories.financialResourceCategories.indexOf(category)!)
-        }
-        if (type == PhysicalResource.self && categories.physicalResourceCategories.contains(category))
-        {
-            categories.financialResourceCategories.removeAtIndex(categories.financialResourceCategories.indexOf(category)!)
-        }
-        if (type == InformationResource.self && categories.informationResourceCategories.contains(category))
-        {
-            categories.financialResourceCategories.removeAtIndex(categories.financialResourceCategories.indexOf(category)!)
-        }
+        return false
+    }
+    
+    func getCategories (resourceClassName : String) -> [String]
+    {
+        return categories[resourceClassName]!
     }
 }
