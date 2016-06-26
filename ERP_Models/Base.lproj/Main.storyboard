@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -672,11 +672,89 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LW-hB-SqV">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="WJL-H0-VVT" kind="embed" id="YXg-8V-4WW"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <animations/>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="OfG-jf-rck">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="2" id="WJL-H0-VVT" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="67I-0T-k5x"/>
+                        <tabViewItem identifier="" id="Jc9-N1-0on"/>
+                        <tabViewItem id="YRm-Iw-HtF"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="hSm-7a-JBm">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="7XP-q5-PN9" kind="relationship" relationship="tabItems" id="0Wa-8k-RCD"/>
+                        <segue destination="eAC-lM-CS9" kind="relationship" relationship="tabItems" id="62V-tK-R2G"/>
+                        <segue destination="Ol1-fJ-lVN" kind="relationship" relationship="tabItems" id="aJO-T3-W3f"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="Mr6-6w-Fzx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="1132"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="wSS-xj-8c2">
+            <objects>
+                <viewController title="Users" id="7XP-q5-PN9" sceneMemberID="viewController">
+                    <view key="view" id="L8x-g0-Z2k">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="GvG-yN-5mO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="868"/>
+        </scene>
+        <!--Resources-->
+        <scene sceneID="a1X-HV-2Nf">
+            <objects>
+                <viewController title="Resources" id="eAC-lM-CS9" sceneMemberID="viewController">
+                    <view key="view" id="ghw-eR-DVG">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="tE3-nr-qIP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="1234"/>
+        </scene>
+        <!--Projects-->
+        <scene sceneID="Mtl-zQ-dXX">
+            <objects>
+                <viewController title="Projects" id="Ol1-fJ-lVN" sceneMemberID="viewController">
+                    <view key="view" id="Qo5-mX-s4f">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="ITn-je-maI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="1687"/>
         </scene>
     </scenes>
 </document>
