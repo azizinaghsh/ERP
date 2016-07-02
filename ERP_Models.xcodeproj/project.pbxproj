@@ -531,6 +531,7 @@
 				D70235E11D1D0746001FD0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D70235E21D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_ModelsTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +540,7 @@
 				D70235E41D1D0746001FD0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D70235E51D1D0746001FD0FE /* Build configuration list for PBXNativeTarget "ERP_ModelsUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +549,7 @@
 				D70235E71D1D0746001FD0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
