@@ -12,7 +12,7 @@ class Requirement: ProjectResourceRelationship {
     
     func tryRequirement () -> Bool
     {
-        if let allocation = resource.allocateResource(to: projectHierarchy, withAmount: amount, estimatedUseTime: self.estimatedUseTime)
+        if let allocation = resource.allocateResource(to: projectHierarchy, withAmount: amount, estimatedUseDuration: self.estimatedUseDuration)
         {
             projectHierarchy.allocateResource(allocation, requirement: self)
             return true

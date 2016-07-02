@@ -18,6 +18,7 @@ class Project: ProjectHierarchy {
     {
         self.humanResourceLimit = humanResourceLimit
         self.budgetLimit = budgetLimit
+        super.init()
     }
     
     func getBudget () -> Int
@@ -49,7 +50,6 @@ class Project: ProjectHierarchy {
             }
         }
         return count
-    }
-    
+    }    
     
 }

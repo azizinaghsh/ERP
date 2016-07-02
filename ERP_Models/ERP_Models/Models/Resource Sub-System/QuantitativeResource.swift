@@ -25,12 +25,12 @@ class QuantitativeResource: Resource {
         super.init(category: category)
     }
     
-    override func allocateResource(to projectHierarchy: ProjectHierarchy, withAmount amount: Int?, estimatedUseTime : Int) -> Allocation?
+    override func allocateResource(to projectHierarchy: ProjectHierarchy, withAmount amount: Int?, estimatedUseDuration : Int) -> Allocation?
     {
         let requiredAmount : Int = amount!
         if (requiredAmount <= remainedAmount)
         {
-            if let newAllocation : Allocation = super.allocateResource(to: projectHierarchy, withAmount: amount, estimatedUseTime: estimatedUseTime)
+            if let newAllocation : Allocation = super.allocateResource(to: projectHierarchy, withAmount: amount, estimatedUseDuration: estimatedUseDuration)
             {
                 allocatedAmount += requiredAmount
                 return newAllocation
@@ -41,10 +41,7 @@ class QuantitativeResource: Resource {
     
     override func freeResource(fromAllocation allocation : Allocation) {
         allocatedAmount -= allocation.amount!
-        if (allocatedAmount == 0)
-        {
-            super.freeResource(fromAllocation: allocation)
-        }
+        super.freeResource(fromAllocation: allocation)
     }
     
     override func getIsAvailable() -> Bool

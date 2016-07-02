@@ -19,6 +19,7 @@ class ProjectCatalog: NSObject {
     {
         projects = Array<Project>()
         categories = ["Web-based Project"]
+        super.init()
     }
     
     static func getInstance () -> ProjectCatalog

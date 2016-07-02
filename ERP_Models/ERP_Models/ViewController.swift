@@ -18,11 +18,11 @@ class ViewController: NSViewController {
         let newHumanResource : HumanResource = HumanResource(totalAmount: 10,category: (ResourceCatalog.getInstance().getCategories(HumanResource.className())[0]))
         let newModule : Module = Module(moduleName: "RigidBody", withDescription: "RigidBody simulation of a 3D object", moduleCreators: [], category: "Module")
         
-        newProject.createRequirement(forResource: newHumanResource, withAmount: 4, estimatedToBeUsed: 10)
-        newProject.createRequirement(forResource: newModule, withAmount: nil, estimatedToBeUsed: 10)
-        newProject2.createRequirement(forResource: newHumanResource, withAmount: 7,estimatedToBeUsed: 10)
-        newProject2.createRequirement(forResource: newModule, withAmount: nil,estimatedToBeUsed: 10)
 
+        newProject.createRequirement(forResource: newHumanResource, withAmount: 4, estimatedToBeUsed: 4)
+        newProject.createRequirement(forResource: newModule, withAmount: nil, estimatedToBeUsed: 5)
+        newProject2.createRequirement(forResource: newHumanResource, withAmount: 6, estimatedToBeUsed: 9)
+        newProject2.createRequirement(forResource: newModule, withAmount: nil, estimatedToBeUsed: 3)
         newProject.checkRequirements()
         newProject2.checkRequirements()
         
@@ -34,6 +34,7 @@ class ViewController: NSViewController {
         print (newProject2.getHumanResourcesCount())
         print (newProject2.getResources(Module.self).count)        
         print (newHumanResource.remainedAmount)
+        print (newHumanResource.getEstimatedRelease())
         
         super.viewDidLoad()
 

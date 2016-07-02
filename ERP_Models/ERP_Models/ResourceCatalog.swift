@@ -22,6 +22,7 @@ class ResourceCatalog: NSObject {
                       FinancialResource.className() : ["Property", "Money", "Sponser"],
                       InformationResource.className() : ["Software Module", "Document"],
                       PhysicalResource.className() : ["PC","Room","Desk","iMac"]]
+        super.init()
     }
     
     static func getInstance () -> ResourceCatalog
@@ -32,6 +33,22 @@ class ResourceCatalog: NSObject {
         }
         return instance
     }
+    
+    func addResource (resource : Resource)
+    {
+        resources.append(resource)
+    }
+    
+    func removeResource (resource : Resource) -> Bool
+    {
+        if let index = resources.indexOf(resource)
+        {
+            resources.removeAtIndex(index)
+            return true
+        }
+        return false
+    }
+    
     
     func getAllResources () -> Array<Resource>
     {

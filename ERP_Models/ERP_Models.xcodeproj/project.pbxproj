@@ -27,6 +27,11 @@
 		D70419121D1EB41400C121E4 /* Maintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70419111D1EB41400C121E4 /* Maintenance.swift */; };
 		D7141A891D1EC29900503607 /* ProjectResourceRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7141A881D1EC29900503607 /* ProjectResourceRelationship.swift */; };
 		D7141A8B1D1ED44300503607 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7141A8A1D1ED44300503607 /* NSDateExtension.swift */; };
+		D78CF1901D27C84E00180A5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CF18F1D27C84E00180A5C /* User.swift */; };
+		D78CF1921D27C86A00180A5C /* UserCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CF1911D27C86A00180A5C /* UserCatalog.swift */; };
+		D78CF1941D27C90000180A5C /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CF1931D27C90000180A5C /* Permission.swift */; };
+		D78CF1961D27CC0600180A5C /* PermissionCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CF1951D27CC0600180A5C /* PermissionCatalog.swift */; };
+		D78CF1981D27D5F300180A5C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CF1971D27D5F300180A5C /* Product.swift */; };
 		D798FE7A1D1E68BC00ECA15B /* ProjectCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE791D1E68BC00ECA15B /* ProjectCatalog.swift */; };
 		D798FE7C1D1E68DC00ECA15B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE7B1D1E68DC00ECA15B /* Project.swift */; };
 		D798FE7E1D1E9BA300ECA15B /* QuantitativeResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE7D1D1E9BA300ECA15B /* QuantitativeResource.swift */; };
@@ -76,6 +81,11 @@
 		D70419111D1EB41400C121E4 /* Maintenance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Maintenance.swift; path = "Models/Resource Sub-System/Maintenance.swift"; sourceTree = "<group>"; };
 		D7141A881D1EC29900503607 /* ProjectResourceRelationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectResourceRelationship.swift; path = "../Models/Project Sub-System/ProjectResourceRelationship.swift"; sourceTree = "<group>"; };
 		D7141A8A1D1ED44300503607 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		D78CF18F1D27C84E00180A5C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "Models/User Sub-System/User.swift"; sourceTree = "<group>"; };
+		D78CF1911D27C86A00180A5C /* UserCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCatalog.swift; path = "Models/User Sub-System/UserCatalog.swift"; sourceTree = "<group>"; };
+		D78CF1931D27C90000180A5C /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Permission.swift; path = "Models/User Sub-System/Permission.swift"; sourceTree = "<group>"; };
+		D78CF1951D27CC0600180A5C /* PermissionCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PermissionCatalog.swift; path = "Models/User Sub-System/PermissionCatalog.swift"; sourceTree = "<group>"; };
+		D78CF1971D27D5F300180A5C /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = "Models/Project Sub-System/Product.swift"; sourceTree = "<group>"; };
 		D798FE791D1E68BC00ECA15B /* ProjectCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCatalog.swift; path = "../Models/Project Sub-System/ProjectCatalog.swift"; sourceTree = "<group>"; };
 		D798FE7B1D1E68DC00ECA15B /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = "Models/Project Sub-System/Project.swift"; sourceTree = "<group>"; };
 		D798FE7D1D1E9BA300ECA15B /* QuantitativeResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuantitativeResource.swift; path = "Models/Resource Sub-System/QuantitativeResource.swift"; sourceTree = "<group>"; };
@@ -130,6 +140,8 @@
 		D70235B91D1D0746001FD0FE /* ERP_Models */ = {
 			isa = PBXGroup;
 			children = (
+				D78CF18E1D27C81300180A5C /* Report Sub-System */,
+				D78CF18D1D27C80A00180A5C /* User Sub-System */,
 				D70235EF1D1D1952001FD0FE /* Resource Sub-System */,
 				D70235EE1D1D0EF4001FD0FE /* Project Sub-System */,
 				D70235BA1D1D0746001FD0FE /* AppDelegate.swift */,
@@ -164,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D7141A881D1EC29900503607 /* ProjectResourceRelationship.swift */,
+				D78CF1971D27D5F300180A5C /* Product.swift */,
 				D798FE7B1D1E68DC00ECA15B /* Project.swift */,
 				D798FE791D1E68BC00ECA15B /* ProjectCatalog.swift */,
 				D70235F01D1D271A001FD0FE /* Requirment.swift */,
@@ -187,6 +200,24 @@
 				D70419111D1EB41400C121E4 /* Maintenance.swift */,
 			);
 			name = "Resource Sub-System";
+			sourceTree = "<group>";
+		};
+		D78CF18D1D27C80A00180A5C /* User Sub-System */ = {
+			isa = PBXGroup;
+			children = (
+				D78CF18F1D27C84E00180A5C /* User.swift */,
+				D78CF1931D27C90000180A5C /* Permission.swift */,
+				D78CF1951D27CC0600180A5C /* PermissionCatalog.swift */,
+				D78CF1911D27C86A00180A5C /* UserCatalog.swift */,
+			);
+			name = "User Sub-System";
+			sourceTree = "<group>";
+		};
+		D78CF18E1D27C81300180A5C /* Report Sub-System */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Report Sub-System";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,17 +358,22 @@
 				D798FE7E1D1E9BA300ECA15B /* QuantitativeResource.swift in Sources */,
 				D70235E91D1D07B2001FD0FE /* Resource.swift in Sources */,
 				D70235F51D1D4DD4001FD0FE /* FinancialResource.swift in Sources */,
+				D78CF1901D27C84E00180A5C /* User.swift in Sources */,
 				D70235F31D1D2922001FD0FE /* ResourceCatalog.swift in Sources */,
+				D78CF1941D27C90000180A5C /* Permission.swift in Sources */,
 				D798FE7C1D1E68DC00ECA15B /* Project.swift in Sources */,
 				D70235ED1D1D0EF0001FD0FE /* Allocation.swift in Sources */,
 				D70235F91D1D4E03001FD0FE /* PhysicalResource.swift in Sources */,
 				D70235BD1D1D0746001FD0FE /* ViewController.swift in Sources */,
 				D798FE7A1D1E68BC00ECA15B /* ProjectCatalog.swift in Sources */,
 				D70235BB1D1D0746001FD0FE /* AppDelegate.swift in Sources */,
+				D78CF1981D27D5F300180A5C /* Product.swift in Sources */,
 				D7141A8B1D1ED44300503607 /* NSDateExtension.swift in Sources */,
 				D70235F71D1D4DF2001FD0FE /* InformationResource.swift in Sources */,
 				D70235F11D1D271A001FD0FE /* Requirment.swift in Sources */,
+				D78CF1921D27C86A00180A5C /* UserCatalog.swift in Sources */,
 				D70235FB1D1D4E2C001FD0FE /* HumanResource.swift in Sources */,
+				D78CF1961D27CC0600180A5C /* PermissionCatalog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

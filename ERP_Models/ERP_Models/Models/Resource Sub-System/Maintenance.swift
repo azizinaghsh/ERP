@@ -10,10 +10,10 @@ import Cocoa
 
 class Maintenance: NSObject {
     var maintainers : Array<HumanResource> = []
-    var describe : String = ""
-    var modificationDate : String
+    var describe : NSString = ""
+    var modificationDate : NSString
     
-    init (maintainersAre maintainers : [HumanResource], descriptionIs description: String, modificationDateIs date:String?)
+    init (maintainersAre maintainers : [HumanResource], descriptionIs description: NSString, modificationDateIs date:NSString?)
     {
         self.maintainers = maintainers
         describe = description

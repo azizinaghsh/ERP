@@ -14,14 +14,14 @@ class ProjectResourceRelationship: NSObject {
     let projectHierarchy : ProjectHierarchy
     let amount : Int?
     var createdAt : String
-    var estimatedUseTime : Int
+    var estimatedUseDuration : Int
     
-    init(resource : Resource, projectHierarchy : ProjectHierarchy, amount : Int?, estimatedUseTime : Int)
+    init(resource : Resource, projectHierarchy : ProjectHierarchy, amount : Int?, estimatedUseDuration : Int)
     {
         self.resource = resource
         self.projectHierarchy = projectHierarchy
         self.amount = amount
-        self.estimatedUseTime = estimatedUseTime
+        self.estimatedUseDuration = estimatedUseDuration
         createdAt = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
     }
 }

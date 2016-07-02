@@ -10,36 +10,23 @@ import Cocoa
 
 class Resource: NSObject {
     
-    private var isAllocated : Bool
-    private var category : String
-    var dateAdded : String
-    var dateRelease : String?
-    var dateEstimatedRelease : String?
-    {
-        if (estimatedTimeUse != nil)
-        {
-            //TODO
-            
-        }
-        return nil
-    }
-    
-    
+    private var allocations : [Allocation] = []
+    private var category : NSString
+    var dateAdded : NSString
     var estimatedTimeUse : Int?
     
-    init (category : String)
+    init (category : NSString)
     {
-        isAllocated = false
         dateAdded = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
         self.category = category
     }
     
     func getIsAvailable () -> Bool
     {
-        return !isAllocated
+        return allocations.isEmpty
     }
     
-    func getCategory () -> String
+    func getCategory () -> NSString
     {
         return category
     }
@@ -49,19 +36,28 @@ class Resource: NSObject {
         self.category = category
     }
     
-    func getEstimatedRelease() -> String?
+    func getEstimatedRelease () -> String?
     {
-        if (getIsAvailable())
+        if allocations.count == 0
         {
             return nil
         }
-        else
+        let formatter : NSDateFormatter = NSDateFormatter ()
+        formatter.dateStyle = .MediumStyle
+        formatter.timeStyle = .ShortStyle
+
+        var bestAllocation : Allocation = allocations[0]
+        for allocation in allocations
         {
-            return dateEstimatedRelease
+            if ((formatter.dateFromString(allocation.estimatedReleaseTime)?.isLessThanDate(formatter.dateFromString(bestAllocation.estimatedReleaseTime)!)) != nil)
+            {
+                bestAllocation = allocation
+            }
         }
+        return bestAllocation.estimatedReleaseTime
     }
     
-    func allocateResource (to projectHierarchy : ProjectHierarchy, withAmount amount : Int? = nil, estimatedUseTime : Int) -> Allocation?
+    func allocateResource (to projectHierarchy : ProjectHierarchy, withAmount amount : Int? = nil, estimatedUseDuration : Int) -> Allocation?
     {
         if (!getIsAvailable())
         {
@@ -69,16 +65,19 @@ class Resource: NSObject {
         }
         else
         {
-            let newAllocation = Allocation (resource: self, projectHierarchy: projectHierarchy, amount: amount, estimatedUseTime: estimatedUseTime)
-            self.estimatedTimeUse = estimatedUseTime
-            isAllocated = true
+            let newAllocation = Allocation (resource: self, projectHierarchy: projectHierarchy, amount: amount, estimatedUseDuration: estimatedUseDuration)
+            self.estimatedTimeUse = estimatedUseDuration
+            allocations.append(newAllocation)
             return newAllocation
         }
     }
     
     func freeResource (fromAllocation allocation : Allocation)
     {
-        isAllocated = false;
+        if let index = allocations.indexOf(allocation)
+        {
+            allocations.removeAtIndex(index)
+        }
     }
 
 }

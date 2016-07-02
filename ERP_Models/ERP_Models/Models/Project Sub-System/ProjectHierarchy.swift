@@ -12,8 +12,11 @@ class ProjectHierarchy: NSObject {
     
     var currentAllocations : Array<Allocation> = []
     var allocations : Array<Allocation> = []
-    private var requirements : Array<Requirement> = []
+    var products : Array<Product> = []
+    var subProjects : [ProjectHierarchy] = []
     var startDate, endDate : String?
+    
+    private var requirements : Array<Requirement> = []
     
     init (dateCreated : String? = nil)
     {
@@ -27,9 +30,15 @@ class ProjectHierarchy: NSObject {
         }
     }
     
-    func createRequirement (forResource resource : Resource, withAmount amount : Int?, estimatedToBeUsed estimate:Int) -> Requirement
+    func createProduct (withName name : NSString, withDescription description : NSString, productCreatorsAre creators : [HumanResource], category: NSString)
     {
-        let requirement = Requirement(resource : resource, projectHierarchy : self, amount: amount, estimatedUseTime: estimate)
+        let newProduct = Product(withName: name, withDescription: description, productCreatorsAre: creators, category: category)
+        products.append(newProduct)
+    }
+    
+    func createRequirement (forResource resource : Resource, withAmount amount : Int?, estimatedToBeUsed estimate : Int) -> Requirement
+    {
+        let requirement = Requirement(resource : resource, projectHierarchy : self, amount: amount, estimatedUseDuration: estimate)
         requirements.append(requirement)
         return requirement
     }
@@ -64,6 +73,7 @@ class ProjectHierarchy: NSObject {
         return requestedAllocations
     }
     
+    
     func checkRequirements ()
     {
         var toBeRemoved : [Requirement] = []
@@ -77,6 +87,24 @@ class ProjectHierarchy: NSObject {
         for requirement in toBeRemoved
         {
             requirements.removeAtIndex(requirements.indexOf(requirement)!)
+        }
+    }
+    
+    
+    func endProject ()
+    {
+        endDate = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        for product in products
+        {
+            product.produce()
+        }
+        for allocation in allocations
+        {
+            allocation.freeResource()
+        }
+        for subProject in subProjects
+        {
+            subProject.endProject()
         }
     }
 }

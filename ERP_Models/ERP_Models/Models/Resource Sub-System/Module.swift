@@ -11,12 +11,12 @@ import Cocoa
 class Module: InformationResource {
     var creators : Array<HumanResource>
     var maintenances : Array<Maintenance> = []
-    var moduleName : String
-    var moduleDescription : String
+    var moduleName : NSString
+    var moduleDescription : NSString
     
     private var maintenanceIndex : Int = 0
     
-    init (moduleName name : String, withDescription description : String, moduleCreators creators : [HumanResource], category : String)
+    init (moduleName name : NSString, withDescription description : NSString, moduleCreators creators : [HumanResource], category : NSString)
     {
         self.creators = creators as Array<HumanResource>
         self.moduleName = name
@@ -24,7 +24,7 @@ class Module: InformationResource {
         super.init(category: category)
     }
     
-    func addMaintenance (withMaintainers maintainers : [HumanResource], description : String, andDate date: String)
+    func addMaintenance (withMaintainers maintainers : [HumanResource], description : NSString, andDate date: NSString)
     {
         let newMaintenance = Maintenance(maintainersAre: maintainers, descriptionIs: description, modificationDateIs: date)
         maintenances.append(newMaintenance)

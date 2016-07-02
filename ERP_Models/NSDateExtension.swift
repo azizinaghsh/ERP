@@ -48,6 +48,14 @@ extension NSDate {
         return isEqualTo
     }
     
+    static func stringToDate (stringDate : String) -> NSDate
+    {
+        let formatter : NSDateFormatter = NSDateFormatter ()
+        formatter.dateStyle = .MediumStyle
+        formatter.timeStyle = .ShortStyle
+        return formatter.dateFromString(stringDate)!
+    }
+    
     func addDays(daysToAdd: Int) -> NSDate {
         let secondsInDays: NSTimeInterval = Double(daysToAdd) * 60 * 60 * 24
         let dateWithDaysAdded: NSDate = self.dateByAddingTimeInterval(secondsInDays)
