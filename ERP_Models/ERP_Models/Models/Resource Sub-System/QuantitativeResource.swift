@@ -18,11 +18,11 @@ class QuantitativeResource: Resource {
         }
     }
     
-    init (totalAmount : Int, category : String)
+    init (name : NSString, totalAmount : Int, category : String)
     {   
         self.totalAmount = totalAmount
         allocatedAmount = 0
-        super.init(category: category)
+        super.init(category: category, name : name)
     }
     
     override func allocateResource(to projectHierarchy: ProjectHierarchy, withAmount amount: Int?, estimatedUseDuration : Int) -> Allocation?

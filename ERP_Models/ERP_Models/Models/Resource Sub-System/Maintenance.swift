@@ -12,14 +12,16 @@ class Maintenance: NSObject {
     var maintainers : Array<HumanResource> = []
     var describe : NSString = ""
     var modificationDate : NSString
+    var title : NSString
     
-    init (maintainersAre maintainers : [HumanResource], descriptionIs description: NSString, modificationDateIs date:NSString?)
+    init (title : NSString, maintainersAre maintainers : [HumanResource], descriptionIs description: NSString, modificationDateIs date:NSString?)
     {
         self.maintainers = maintainers
+        self.title = title
         describe = description
         if (date == nil)
         {
-            self.modificationDate = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+            self.modificationDate = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .NoStyle)
         }
         else
         {

@@ -51,9 +51,9 @@ class ProjectCatalog: NSObject {
         return false
     }
     
-    func addProject (budgetLimit : Int, humanResourceLimit : Int) -> Project
+    func addProject (withName name : NSString, budgetLimit : Int, humanResourceLimit : Int, isManagedBy manager : User?) -> Project
     {
-        let newProject = Project (budgetLimit: budgetLimit, humanResourceLimit: humanResourceLimit)
+        let newProject = Project (withName : name, budgetLimitIs: budgetLimit, humanResourceLimitIs: humanResourceLimit, isManagedBy : manager)
         projects.append(newProject)
         return newProject
     }

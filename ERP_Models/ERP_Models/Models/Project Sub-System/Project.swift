@@ -12,13 +12,15 @@ class Project: ProjectHierarchy {
     
     var humanResourceLimit : Int
     var budgetLimit : Int
-
     
-    init (budgetLimit : Int, humanResourceLimit : Int)
+    var projectManager : User?
+    
+    init (withName name : NSString, budgetLimitIs budgetLimit : Int, humanResourceLimitIs humanResourceLimit : Int, isManagedBy manager : User?)
     {
         self.humanResourceLimit = humanResourceLimit
         self.budgetLimit = budgetLimit
-        super.init()
+        self.projectManager = manager
+        super.init(withName: name)
     }
     
     func getBudget () -> Int

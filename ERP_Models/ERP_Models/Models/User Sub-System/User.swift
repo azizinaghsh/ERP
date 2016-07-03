@@ -14,7 +14,7 @@ class User: NSObject {
     
     var firstName, lastName, username, password : NSString
     
-    init (firstName : NSString, lastName : NSString, username : NSString, password : NSString)
+    init (withFirstName firstName : NSString, lastName : NSString, username : NSString, andPassword password : NSString)
     {
         userPermission = PermissionCatalog.getInstance().defaultPermission
         self.firstName = firstName

@@ -11,24 +11,29 @@ import Cocoa
 class ProjectHierarchy: NSObject {
     
     var currentAllocations : Array<Allocation> = []
-    var allocations : Array<Allocation> = []
+    var totalAllocations : Array<Allocation> = []
     var products : Array<Product> = []
     var subProjects : [ProjectHierarchy] = []
-    var startDate, endDate : String?
+    var startDate, endDate : NSString?
+    var projectName : NSString
+    var projectDescription : NSString = ""
     
     private var requirements : Array<Requirement> = []
     
-    init (dateCreated : String? = nil)
+    init (withName name : NSString, dateCreated : NSString? = nil)
     {
         if (dateCreated == nil)
         {
-            self.startDate = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+            self.startDate = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .NoStyle)
         }
         else
         {
             self.startDate = dateCreated!
         }
+        self.projectName = name
+        super.init()
     }
+
     
     func createProduct (withName name : NSString, withDescription description : NSString, productCreatorsAre creators : [HumanResource], category: NSString)
     {
@@ -43,10 +48,17 @@ class ProjectHierarchy: NSObject {
         return requirement
     }
     
+    func addSubSystem (withName name : NSString) -> ProjectHierarchy
+    {
+        let newSubProject = ProjectHierarchy (withName: name)
+        subProjects.append(newSubProject)
+        return newSubProject
+    }
+    
     func allocateResource (allocation : Allocation, requirement : Requirement)
     {
         currentAllocations.append(allocation)
-        allocations.append(allocation)
+        totalAllocations.append(allocation)
         
         //TODO: notify project manager
     }
@@ -60,7 +72,7 @@ class ProjectHierarchy: NSObject {
     func getResources<T where T:Resource> (type : T.Type, onlyCurrent : Bool = false) -> [Allocation]
     {
         var requestedAllocations : [Allocation] = []
-        for allocation in allocations
+        for allocation in totalAllocations
         {
             if (allocation.resource is T)
             {
@@ -93,12 +105,13 @@ class ProjectHierarchy: NSObject {
     
     func endProject ()
     {
-        endDate = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        endDate = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .NoStyle)
+        requirements.removeAll()
         for product in products
         {
             product.produce()
         }
-        for allocation in allocations
+        for allocation in currentAllocations
         {
             allocation.freeResource()
         }

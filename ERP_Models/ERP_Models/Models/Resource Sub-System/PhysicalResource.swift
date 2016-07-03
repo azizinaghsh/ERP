@@ -9,5 +9,13 @@
 import Cocoa
 
 class PhysicalResource: Resource {
-
+    var physicalResourceCode : NSString
+    var roomNumber : Int
+    
+    init (category : NSString, name : NSString, physicalResourceCode : NSString, roomNumber : Int)
+    {
+        self.physicalResourceCode = physicalResourceCode
+        self.roomNumber = roomNumber
+        super.init(category: category, name: name)
+    }
 }

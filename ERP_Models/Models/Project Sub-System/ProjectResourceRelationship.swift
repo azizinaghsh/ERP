@@ -22,6 +22,6 @@ class ProjectResourceRelationship: NSObject {
         self.projectHierarchy = projectHierarchy
         self.amount = amount
         self.estimatedUseDuration = estimatedUseDuration
-        createdAt = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        createdAt = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .NoStyle)
     }
 }

@@ -48,12 +48,12 @@ extension NSDate {
         return isEqualTo
     }
     
-    static func stringToDate (stringDate : String) -> NSDate
+    static func stringToDate (stringDate : String) -> NSDate?
     {
         let formatter : NSDateFormatter = NSDateFormatter ()
         formatter.dateStyle = .MediumStyle
-        formatter.timeStyle = .ShortStyle
-        return formatter.dateFromString(stringDate)!
+        formatter.timeStyle = .NoStyle
+        return formatter.dateFromString(stringDate)
     }
     
     func addDays(daysToAdd: Int) -> NSDate {

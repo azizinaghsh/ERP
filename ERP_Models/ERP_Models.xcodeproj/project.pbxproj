@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		D70235BB1D1D0746001FD0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235BA1D1D0746001FD0FE /* AppDelegate.swift */; };
 		D70235BD1D1D0746001FD0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235BC1D1D0746001FD0FE /* ViewController.swift */; };
-		D70235C01D1D0746001FD0FE /* ERP_Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D70235BE1D1D0746001FD0FE /* ERP_Models.xcdatamodeld */; };
 		D70235C21D1D0746001FD0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70235C11D1D0746001FD0FE /* Assets.xcassets */; };
-		D70235C51D1D0746001FD0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70235C31D1D0746001FD0FE /* Main.storyboard */; };
 		D70235D01D1D0746001FD0FE /* ERP_ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235CF1D1D0746001FD0FE /* ERP_ModelsTests.swift */; };
 		D70235DB1D1D0746001FD0FE /* ERP_ModelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235DA1D1D0746001FD0FE /* ERP_ModelsUITests.swift */; };
 		D70235E91D1D07B2001FD0FE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70235E81D1D07B2001FD0FE /* Resource.swift */; };
@@ -27,6 +25,44 @@
 		D70419121D1EB41400C121E4 /* Maintenance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70419111D1EB41400C121E4 /* Maintenance.swift */; };
 		D7141A891D1EC29900503607 /* ProjectResourceRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7141A881D1EC29900503607 /* ProjectResourceRelationship.swift */; };
 		D7141A8B1D1ED44300503607 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7141A8A1D1ED44300503607 /* NSDateExtension.swift */; };
+		D754CF701D29607200F3AEB7 /* FinancialResourceCategoriesEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF4A1D29607200F3AEB7 /* FinancialResourceCategoriesEntity+CoreDataProperties.swift */; };
+		D754CF711D29607200F3AEB7 /* FinancialResourceCategoriesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF4B1D29607200F3AEB7 /* FinancialResourceCategoriesEntity.swift */; };
+		D754CF721D29607200F3AEB7 /* ModuleEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF4C1D29607200F3AEB7 /* ModuleEntity+CoreDataProperties.swift */; };
+		D754CF731D29607200F3AEB7 /* ModuleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF4D1D29607200F3AEB7 /* ModuleEntity.swift */; };
+		D754CF741D29607200F3AEB7 /* HumanResourceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF4E1D29607200F3AEB7 /* HumanResourceEntity+CoreDataProperties.swift */; };
+		D754CF751D29607200F3AEB7 /* HumanResourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF4F1D29607200F3AEB7 /* HumanResourceEntity.swift */; };
+		D754CF761D29607200F3AEB7 /* PhysicalResourceCategoriesEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF501D29607200F3AEB7 /* PhysicalResourceCategoriesEntity+CoreDataProperties.swift */; };
+		D754CF771D29607200F3AEB7 /* PhysicalResourceCategoriesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF511D29607200F3AEB7 /* PhysicalResourceCategoriesEntity.swift */; };
+		D754CF781D29607200F3AEB7 /* HumanResourceCategoriesEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF521D29607200F3AEB7 /* HumanResourceCategoriesEntity+CoreDataProperties.swift */; };
+		D754CF791D29607200F3AEB7 /* HumanResourceCategoriesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF531D29607200F3AEB7 /* HumanResourceCategoriesEntity.swift */; };
+		D754CF7A1D29607200F3AEB7 /* InformationResourceCategoriesEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF541D29607200F3AEB7 /* InformationResourceCategoriesEntity+CoreDataProperties.swift */; };
+		D754CF7B1D29607200F3AEB7 /* InformationResourceCategoriesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF551D29607200F3AEB7 /* InformationResourceCategoriesEntity.swift */; };
+		D754CF7C1D29607200F3AEB7 /* FinancialResourceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF561D29607200F3AEB7 /* FinancialResourceEntity+CoreDataProperties.swift */; };
+		D754CF7D1D29607200F3AEB7 /* FinancialResourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF571D29607200F3AEB7 /* FinancialResourceEntity.swift */; };
+		D754CF7E1D29607200F3AEB7 /* InformationResourceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF581D29607200F3AEB7 /* InformationResourceEntity+CoreDataProperties.swift */; };
+		D754CF7F1D29607200F3AEB7 /* InformationResourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF591D29607200F3AEB7 /* InformationResourceEntity.swift */; };
+		D754CF801D29607200F3AEB7 /* PermissionEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF5A1D29607200F3AEB7 /* PermissionEntity+CoreDataProperties.swift */; };
+		D754CF811D29607200F3AEB7 /* PermissionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF5B1D29607200F3AEB7 /* PermissionEntity.swift */; };
+		D754CF821D29607200F3AEB7 /* QuantitativeResourceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF5C1D29607200F3AEB7 /* QuantitativeResourceEntity+CoreDataProperties.swift */; };
+		D754CF831D29607200F3AEB7 /* QuantitativeResourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF5D1D29607200F3AEB7 /* QuantitativeResourceEntity.swift */; };
+		D754CF841D29607200F3AEB7 /* ResourceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF5E1D29607200F3AEB7 /* ResourceEntity+CoreDataProperties.swift */; };
+		D754CF851D29607200F3AEB7 /* ResourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF5F1D29607200F3AEB7 /* ResourceEntity.swift */; };
+		D754CF861D29607200F3AEB7 /* RequirementEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF601D29607200F3AEB7 /* RequirementEntity+CoreDataProperties.swift */; };
+		D754CF871D29607200F3AEB7 /* RequirementEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF611D29607200F3AEB7 /* RequirementEntity.swift */; };
+		D754CF881D29607200F3AEB7 /* MaintenanceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF621D29607200F3AEB7 /* MaintenanceEntity+CoreDataProperties.swift */; };
+		D754CF891D29607200F3AEB7 /* MaintenanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF631D29607200F3AEB7 /* MaintenanceEntity.swift */; };
+		D754CF8A1D29607200F3AEB7 /* PhysicalResourceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF641D29607200F3AEB7 /* PhysicalResourceEntity+CoreDataProperties.swift */; };
+		D754CF8B1D29607200F3AEB7 /* PhysicalResourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF651D29607200F3AEB7 /* PhysicalResourceEntity.swift */; };
+		D754CF8C1D29607200F3AEB7 /* ProjectCategoriesEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF661D29607200F3AEB7 /* ProjectCategoriesEntity+CoreDataProperties.swift */; };
+		D754CF8D1D29607200F3AEB7 /* ProjectCategoriesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF671D29607200F3AEB7 /* ProjectCategoriesEntity.swift */; };
+		D754CF8E1D29607200F3AEB7 /* ProjectHierarchyEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF681D29607200F3AEB7 /* ProjectHierarchyEntity+CoreDataProperties.swift */; };
+		D754CF8F1D29607200F3AEB7 /* ProjectHierarchyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF691D29607200F3AEB7 /* ProjectHierarchyEntity.swift */; };
+		D754CF901D29607200F3AEB7 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF6A1D29607200F3AEB7 /* UserEntity+CoreDataProperties.swift */; };
+		D754CF911D29607200F3AEB7 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF6B1D29607200F3AEB7 /* UserEntity.swift */; };
+		D754CF921D29607200F3AEB7 /* ProjectEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF6C1D29607200F3AEB7 /* ProjectEntity+CoreDataProperties.swift */; };
+		D754CF931D29607200F3AEB7 /* ProjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF6D1D29607200F3AEB7 /* ProjectEntity.swift */; };
+		D754CF941D29607200F3AEB7 /* AllocationEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF6E1D29607200F3AEB7 /* AllocationEntity+CoreDataProperties.swift */; };
+		D754CF951D29607200F3AEB7 /* AllocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754CF6F1D29607200F3AEB7 /* AllocationEntity.swift */; };
 		D78CF1901D27C84E00180A5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CF18F1D27C84E00180A5C /* User.swift */; };
 		D78CF1921D27C86A00180A5C /* UserCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CF1911D27C86A00180A5C /* UserCatalog.swift */; };
 		D78CF1941D27C90000180A5C /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78CF1931D27C90000180A5C /* Permission.swift */; };
@@ -35,6 +71,9 @@
 		D798FE7A1D1E68BC00ECA15B /* ProjectCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE791D1E68BC00ECA15B /* ProjectCatalog.swift */; };
 		D798FE7C1D1E68DC00ECA15B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE7B1D1E68DC00ECA15B /* Project.swift */; };
 		D798FE7E1D1E9BA300ECA15B /* QuantitativeResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798FE7D1D1E9BA300ECA15B /* QuantitativeResource.swift */; };
+		D7A8889B1D28BFE100ACA6A9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8889A1D28BFE100ACA6A9 /* DataController.swift */; };
+		D7D039EE1D292A450080129A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7D039EC1D292A450080129A /* Main.storyboard */; };
+		D7D039F11D292C290080129A /* ERP_Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7D039EF1D292C290080129A /* ERP_Models.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +97,7 @@
 		D70235B71D1D0746001FD0FE /* ERP_Models.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERP_Models.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70235BA1D1D0746001FD0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70235BC1D1D0746001FD0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D70235BF1D1D0746001FD0FE /* ERP_Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ERP_Models.xcdatamodel; sourceTree = "<group>"; };
 		D70235C11D1D0746001FD0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D70235C41D1D0746001FD0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D70235C61D1D0746001FD0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D70235CB1D1D0746001FD0FE /* ERP_ModelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERP_ModelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70235CF1D1D0746001FD0FE /* ERP_ModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERP_ModelsTests.swift; sourceTree = "<group>"; };
@@ -81,6 +118,44 @@
 		D70419111D1EB41400C121E4 /* Maintenance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Maintenance.swift; path = "Models/Resource Sub-System/Maintenance.swift"; sourceTree = "<group>"; };
 		D7141A881D1EC29900503607 /* ProjectResourceRelationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectResourceRelationship.swift; path = "../Models/Project Sub-System/ProjectResourceRelationship.swift"; sourceTree = "<group>"; };
 		D7141A8A1D1ED44300503607 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		D754CF4A1D29607200F3AEB7 /* FinancialResourceCategoriesEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FinancialResourceCategoriesEntity+CoreDataProperties.swift"; path = "Models/Database/FinancialResourceCategoriesEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF4B1D29607200F3AEB7 /* FinancialResourceCategoriesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinancialResourceCategoriesEntity.swift; path = Models/Database/FinancialResourceCategoriesEntity.swift; sourceTree = "<group>"; };
+		D754CF4C1D29607200F3AEB7 /* ModuleEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ModuleEntity+CoreDataProperties.swift"; path = "Models/Database/ModuleEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF4D1D29607200F3AEB7 /* ModuleEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModuleEntity.swift; path = Models/Database/ModuleEntity.swift; sourceTree = "<group>"; };
+		D754CF4E1D29607200F3AEB7 /* HumanResourceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HumanResourceEntity+CoreDataProperties.swift"; path = "Models/Database/HumanResourceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF4F1D29607200F3AEB7 /* HumanResourceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HumanResourceEntity.swift; path = Models/Database/HumanResourceEntity.swift; sourceTree = "<group>"; };
+		D754CF501D29607200F3AEB7 /* PhysicalResourceCategoriesEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PhysicalResourceCategoriesEntity+CoreDataProperties.swift"; path = "Models/Database/PhysicalResourceCategoriesEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF511D29607200F3AEB7 /* PhysicalResourceCategoriesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhysicalResourceCategoriesEntity.swift; path = Models/Database/PhysicalResourceCategoriesEntity.swift; sourceTree = "<group>"; };
+		D754CF521D29607200F3AEB7 /* HumanResourceCategoriesEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HumanResourceCategoriesEntity+CoreDataProperties.swift"; path = "Models/Database/HumanResourceCategoriesEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF531D29607200F3AEB7 /* HumanResourceCategoriesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HumanResourceCategoriesEntity.swift; path = Models/Database/HumanResourceCategoriesEntity.swift; sourceTree = "<group>"; };
+		D754CF541D29607200F3AEB7 /* InformationResourceCategoriesEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "InformationResourceCategoriesEntity+CoreDataProperties.swift"; path = "Models/Database/InformationResourceCategoriesEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF551D29607200F3AEB7 /* InformationResourceCategoriesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationResourceCategoriesEntity.swift; path = Models/Database/InformationResourceCategoriesEntity.swift; sourceTree = "<group>"; };
+		D754CF561D29607200F3AEB7 /* FinancialResourceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FinancialResourceEntity+CoreDataProperties.swift"; path = "Models/Database/FinancialResourceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF571D29607200F3AEB7 /* FinancialResourceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinancialResourceEntity.swift; path = Models/Database/FinancialResourceEntity.swift; sourceTree = "<group>"; };
+		D754CF581D29607200F3AEB7 /* InformationResourceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "InformationResourceEntity+CoreDataProperties.swift"; path = "Models/Database/InformationResourceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF591D29607200F3AEB7 /* InformationResourceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationResourceEntity.swift; path = Models/Database/InformationResourceEntity.swift; sourceTree = "<group>"; };
+		D754CF5A1D29607200F3AEB7 /* PermissionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PermissionEntity+CoreDataProperties.swift"; path = "Models/Database/PermissionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF5B1D29607200F3AEB7 /* PermissionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PermissionEntity.swift; path = Models/Database/PermissionEntity.swift; sourceTree = "<group>"; };
+		D754CF5C1D29607200F3AEB7 /* QuantitativeResourceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "QuantitativeResourceEntity+CoreDataProperties.swift"; path = "Models/Database/QuantitativeResourceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF5D1D29607200F3AEB7 /* QuantitativeResourceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuantitativeResourceEntity.swift; path = Models/Database/QuantitativeResourceEntity.swift; sourceTree = "<group>"; };
+		D754CF5E1D29607200F3AEB7 /* ResourceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ResourceEntity+CoreDataProperties.swift"; path = "Models/Database/ResourceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF5F1D29607200F3AEB7 /* ResourceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceEntity.swift; path = Models/Database/ResourceEntity.swift; sourceTree = "<group>"; };
+		D754CF601D29607200F3AEB7 /* RequirementEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RequirementEntity+CoreDataProperties.swift"; path = "Models/Database/RequirementEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF611D29607200F3AEB7 /* RequirementEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequirementEntity.swift; path = Models/Database/RequirementEntity.swift; sourceTree = "<group>"; };
+		D754CF621D29607200F3AEB7 /* MaintenanceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MaintenanceEntity+CoreDataProperties.swift"; path = "Models/Database/MaintenanceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF631D29607200F3AEB7 /* MaintenanceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaintenanceEntity.swift; path = Models/Database/MaintenanceEntity.swift; sourceTree = "<group>"; };
+		D754CF641D29607200F3AEB7 /* PhysicalResourceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PhysicalResourceEntity+CoreDataProperties.swift"; path = "Models/Database/PhysicalResourceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF651D29607200F3AEB7 /* PhysicalResourceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhysicalResourceEntity.swift; path = Models/Database/PhysicalResourceEntity.swift; sourceTree = "<group>"; };
+		D754CF661D29607200F3AEB7 /* ProjectCategoriesEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ProjectCategoriesEntity+CoreDataProperties.swift"; path = "Models/Database/ProjectCategoriesEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF671D29607200F3AEB7 /* ProjectCategoriesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCategoriesEntity.swift; path = Models/Database/ProjectCategoriesEntity.swift; sourceTree = "<group>"; };
+		D754CF681D29607200F3AEB7 /* ProjectHierarchyEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ProjectHierarchyEntity+CoreDataProperties.swift"; path = "Models/Database/ProjectHierarchyEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF691D29607200F3AEB7 /* ProjectHierarchyEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectHierarchyEntity.swift; path = Models/Database/ProjectHierarchyEntity.swift; sourceTree = "<group>"; };
+		D754CF6A1D29607200F3AEB7 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserEntity+CoreDataProperties.swift"; path = "Models/Database/UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF6B1D29607200F3AEB7 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEntity.swift; path = Models/Database/UserEntity.swift; sourceTree = "<group>"; };
+		D754CF6C1D29607200F3AEB7 /* ProjectEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ProjectEntity+CoreDataProperties.swift"; path = "Models/Database/ProjectEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF6D1D29607200F3AEB7 /* ProjectEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectEntity.swift; path = Models/Database/ProjectEntity.swift; sourceTree = "<group>"; };
+		D754CF6E1D29607200F3AEB7 /* AllocationEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AllocationEntity+CoreDataProperties.swift"; path = "Models/Database/AllocationEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D754CF6F1D29607200F3AEB7 /* AllocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllocationEntity.swift; path = Models/Database/AllocationEntity.swift; sourceTree = "<group>"; };
 		D78CF18F1D27C84E00180A5C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "Models/User Sub-System/User.swift"; sourceTree = "<group>"; };
 		D78CF1911D27C86A00180A5C /* UserCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCatalog.swift; path = "Models/User Sub-System/UserCatalog.swift"; sourceTree = "<group>"; };
 		D78CF1931D27C90000180A5C /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Permission.swift; path = "Models/User Sub-System/Permission.swift"; sourceTree = "<group>"; };
@@ -89,6 +164,10 @@
 		D798FE791D1E68BC00ECA15B /* ProjectCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCatalog.swift; path = "../Models/Project Sub-System/ProjectCatalog.swift"; sourceTree = "<group>"; };
 		D798FE7B1D1E68DC00ECA15B /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = "Models/Project Sub-System/Project.swift"; sourceTree = "<group>"; };
 		D798FE7D1D1E9BA300ECA15B /* QuantitativeResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuantitativeResource.swift; path = "Models/Resource Sub-System/QuantitativeResource.swift"; sourceTree = "<group>"; };
+		D7A8888D1D28A35400ACA6A9 /* ERP_Models-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ERP_Models-Bridging-Header.h"; sourceTree = "<group>"; };
+		D7A8889A1D28BFE100ACA6A9 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = Models/Database/DataController.swift; sourceTree = "<group>"; };
+		D7D039ED1D292A450080129A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7D039F01D292C290080129A /* ERP_Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ERP_Models.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +203,7 @@
 				D70235CE1D1D0746001FD0FE /* ERP_ModelsTests */,
 				D70235D91D1D0746001FD0FE /* ERP_ModelsUITests */,
 				D70235B81D1D0746001FD0FE /* Products */,
+				D7A8888D1D28A35400ACA6A9 /* ERP_Models-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +220,7 @@
 		D70235B91D1D0746001FD0FE /* ERP_Models */ = {
 			isa = PBXGroup;
 			children = (
+				D7A888881D2898DD00ACA6A9 /* Database */,
 				D78CF18E1D27C81300180A5C /* Report Sub-System */,
 				D78CF18D1D27C80A00180A5C /* User Sub-System */,
 				D70235EF1D1D1952001FD0FE /* Resource Sub-System */,
@@ -147,9 +228,9 @@
 				D70235BA1D1D0746001FD0FE /* AppDelegate.swift */,
 				D70235BC1D1D0746001FD0FE /* ViewController.swift */,
 				D70235C11D1D0746001FD0FE /* Assets.xcassets */,
-				D70235C31D1D0746001FD0FE /* Main.storyboard */,
 				D70235C61D1D0746001FD0FE /* Info.plist */,
-				D70235BE1D1D0746001FD0FE /* ERP_Models.xcdatamodeld */,
+				D7D039EC1D292A450080129A /* Main.storyboard */,
+				D7D039EF1D292C290080129A /* ERP_Models.xcdatamodeld */,
 			);
 			path = ERP_Models;
 			sourceTree = "<group>";
@@ -218,6 +299,52 @@
 			children = (
 			);
 			name = "Report Sub-System";
+			sourceTree = "<group>";
+		};
+		D7A888881D2898DD00ACA6A9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D754CF4A1D29607200F3AEB7 /* FinancialResourceCategoriesEntity+CoreDataProperties.swift */,
+				D754CF4B1D29607200F3AEB7 /* FinancialResourceCategoriesEntity.swift */,
+				D754CF4C1D29607200F3AEB7 /* ModuleEntity+CoreDataProperties.swift */,
+				D754CF4D1D29607200F3AEB7 /* ModuleEntity.swift */,
+				D754CF4E1D29607200F3AEB7 /* HumanResourceEntity+CoreDataProperties.swift */,
+				D754CF4F1D29607200F3AEB7 /* HumanResourceEntity.swift */,
+				D754CF501D29607200F3AEB7 /* PhysicalResourceCategoriesEntity+CoreDataProperties.swift */,
+				D754CF511D29607200F3AEB7 /* PhysicalResourceCategoriesEntity.swift */,
+				D754CF521D29607200F3AEB7 /* HumanResourceCategoriesEntity+CoreDataProperties.swift */,
+				D754CF531D29607200F3AEB7 /* HumanResourceCategoriesEntity.swift */,
+				D754CF541D29607200F3AEB7 /* InformationResourceCategoriesEntity+CoreDataProperties.swift */,
+				D754CF551D29607200F3AEB7 /* InformationResourceCategoriesEntity.swift */,
+				D754CF561D29607200F3AEB7 /* FinancialResourceEntity+CoreDataProperties.swift */,
+				D754CF571D29607200F3AEB7 /* FinancialResourceEntity.swift */,
+				D754CF581D29607200F3AEB7 /* InformationResourceEntity+CoreDataProperties.swift */,
+				D754CF591D29607200F3AEB7 /* InformationResourceEntity.swift */,
+				D754CF5A1D29607200F3AEB7 /* PermissionEntity+CoreDataProperties.swift */,
+				D754CF5B1D29607200F3AEB7 /* PermissionEntity.swift */,
+				D754CF5C1D29607200F3AEB7 /* QuantitativeResourceEntity+CoreDataProperties.swift */,
+				D754CF5D1D29607200F3AEB7 /* QuantitativeResourceEntity.swift */,
+				D754CF5E1D29607200F3AEB7 /* ResourceEntity+CoreDataProperties.swift */,
+				D754CF5F1D29607200F3AEB7 /* ResourceEntity.swift */,
+				D754CF601D29607200F3AEB7 /* RequirementEntity+CoreDataProperties.swift */,
+				D754CF611D29607200F3AEB7 /* RequirementEntity.swift */,
+				D754CF621D29607200F3AEB7 /* MaintenanceEntity+CoreDataProperties.swift */,
+				D754CF631D29607200F3AEB7 /* MaintenanceEntity.swift */,
+				D754CF641D29607200F3AEB7 /* PhysicalResourceEntity+CoreDataProperties.swift */,
+				D754CF651D29607200F3AEB7 /* PhysicalResourceEntity.swift */,
+				D754CF661D29607200F3AEB7 /* ProjectCategoriesEntity+CoreDataProperties.swift */,
+				D754CF671D29607200F3AEB7 /* ProjectCategoriesEntity.swift */,
+				D754CF681D29607200F3AEB7 /* ProjectHierarchyEntity+CoreDataProperties.swift */,
+				D754CF691D29607200F3AEB7 /* ProjectHierarchyEntity.swift */,
+				D754CF6A1D29607200F3AEB7 /* UserEntity+CoreDataProperties.swift */,
+				D754CF6B1D29607200F3AEB7 /* UserEntity.swift */,
+				D754CF6C1D29607200F3AEB7 /* ProjectEntity+CoreDataProperties.swift */,
+				D754CF6D1D29607200F3AEB7 /* ProjectEntity.swift */,
+				D754CF6E1D29607200F3AEB7 /* AllocationEntity+CoreDataProperties.swift */,
+				D754CF6F1D29607200F3AEB7 /* AllocationEntity.swift */,
+				D7A8889A1D28BFE100ACA6A9 /* DataController.swift */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70235C21D1D0746001FD0FE /* Assets.xcassets in Resources */,
-				D70235C51D1D0746001FD0FE /* Main.storyboard in Resources */,
+				D7D039EE1D292A450080129A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,26 +477,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D754CF711D29607200F3AEB7 /* FinancialResourceCategoriesEntity.swift in Sources */,
 				D70235EB1D1D08ED001FD0FE /* ProjectHierarchy.swift in Sources */,
 				D7141A891D1EC29900503607 /* ProjectResourceRelationship.swift in Sources */,
-				D70235C01D1D0746001FD0FE /* ERP_Models.xcdatamodeld in Sources */,
+				D754CF911D29607200F3AEB7 /* UserEntity.swift in Sources */,
+				D7D039F11D292C290080129A /* ERP_Models.xcdatamodeld in Sources */,
+				D754CF781D29607200F3AEB7 /* HumanResourceCategoriesEntity+CoreDataProperties.swift in Sources */,
+				D754CF751D29607200F3AEB7 /* HumanResourceEntity.swift in Sources */,
+				D7A8889B1D28BFE100ACA6A9 /* DataController.swift in Sources */,
+				D754CF851D29607200F3AEB7 /* ResourceEntity.swift in Sources */,
 				D70419101D1EB23900C121E4 /* Module.swift in Sources */,
 				D70419121D1EB41400C121E4 /* Maintenance.swift in Sources */,
 				D798FE7E1D1E9BA300ECA15B /* QuantitativeResource.swift in Sources */,
 				D70235E91D1D07B2001FD0FE /* Resource.swift in Sources */,
 				D70235F51D1D4DD4001FD0FE /* FinancialResource.swift in Sources */,
 				D78CF1901D27C84E00180A5C /* User.swift in Sources */,
+				D754CF861D29607200F3AEB7 /* RequirementEntity+CoreDataProperties.swift in Sources */,
+				D754CF8B1D29607200F3AEB7 /* PhysicalResourceEntity.swift in Sources */,
+				D754CF801D29607200F3AEB7 /* PermissionEntity+CoreDataProperties.swift in Sources */,
+				D754CF811D29607200F3AEB7 /* PermissionEntity.swift in Sources */,
 				D70235F31D1D2922001FD0FE /* ResourceCatalog.swift in Sources */,
+				D754CF7B1D29607200F3AEB7 /* InformationResourceCategoriesEntity.swift in Sources */,
 				D78CF1941D27C90000180A5C /* Permission.swift in Sources */,
+				D754CF771D29607200F3AEB7 /* PhysicalResourceCategoriesEntity.swift in Sources */,
 				D798FE7C1D1E68DC00ECA15B /* Project.swift in Sources */,
+				D754CF931D29607200F3AEB7 /* ProjectEntity.swift in Sources */,
 				D70235ED1D1D0EF0001FD0FE /* Allocation.swift in Sources */,
 				D70235F91D1D4E03001FD0FE /* PhysicalResource.swift in Sources */,
+				D754CF881D29607200F3AEB7 /* MaintenanceEntity+CoreDataProperties.swift in Sources */,
+				D754CF7D1D29607200F3AEB7 /* FinancialResourceEntity.swift in Sources */,
+				D754CF951D29607200F3AEB7 /* AllocationEntity.swift in Sources */,
 				D70235BD1D1D0746001FD0FE /* ViewController.swift in Sources */,
+				D754CF8D1D29607200F3AEB7 /* ProjectCategoriesEntity.swift in Sources */,
+				D754CF841D29607200F3AEB7 /* ResourceEntity+CoreDataProperties.swift in Sources */,
 				D798FE7A1D1E68BC00ECA15B /* ProjectCatalog.swift in Sources */,
+				D754CF8F1D29607200F3AEB7 /* ProjectHierarchyEntity.swift in Sources */,
+				D754CF941D29607200F3AEB7 /* AllocationEntity+CoreDataProperties.swift in Sources */,
+				D754CF8C1D29607200F3AEB7 /* ProjectCategoriesEntity+CoreDataProperties.swift in Sources */,
+				D754CF8E1D29607200F3AEB7 /* ProjectHierarchyEntity+CoreDataProperties.swift in Sources */,
+				D754CF721D29607200F3AEB7 /* ModuleEntity+CoreDataProperties.swift in Sources */,
+				D754CF921D29607200F3AEB7 /* ProjectEntity+CoreDataProperties.swift in Sources */,
 				D70235BB1D1D0746001FD0FE /* AppDelegate.swift in Sources */,
+				D754CF871D29607200F3AEB7 /* RequirementEntity.swift in Sources */,
+				D754CF7A1D29607200F3AEB7 /* InformationResourceCategoriesEntity+CoreDataProperties.swift in Sources */,
+				D754CF741D29607200F3AEB7 /* HumanResourceEntity+CoreDataProperties.swift in Sources */,
+				D754CF821D29607200F3AEB7 /* QuantitativeResourceEntity+CoreDataProperties.swift in Sources */,
+				D754CF7E1D29607200F3AEB7 /* InformationResourceEntity+CoreDataProperties.swift in Sources */,
+				D754CF701D29607200F3AEB7 /* FinancialResourceCategoriesEntity+CoreDataProperties.swift in Sources */,
+				D754CF761D29607200F3AEB7 /* PhysicalResourceCategoriesEntity+CoreDataProperties.swift in Sources */,
+				D754CF831D29607200F3AEB7 /* QuantitativeResourceEntity.swift in Sources */,
+				D754CF8A1D29607200F3AEB7 /* PhysicalResourceEntity+CoreDataProperties.swift in Sources */,
+				D754CF891D29607200F3AEB7 /* MaintenanceEntity.swift in Sources */,
+				D754CF7C1D29607200F3AEB7 /* FinancialResourceEntity+CoreDataProperties.swift in Sources */,
+				D754CF7F1D29607200F3AEB7 /* InformationResourceEntity.swift in Sources */,
 				D78CF1981D27D5F300180A5C /* Product.swift in Sources */,
 				D7141A8B1D1ED44300503607 /* NSDateExtension.swift in Sources */,
 				D70235F71D1D4DF2001FD0FE /* InformationResource.swift in Sources */,
+				D754CF731D29607200F3AEB7 /* ModuleEntity.swift in Sources */,
+				D754CF791D29607200F3AEB7 /* HumanResourceCategoriesEntity.swift in Sources */,
+				D754CF901D29607200F3AEB7 /* UserEntity+CoreDataProperties.swift in Sources */,
 				D70235F11D1D271A001FD0FE /* Requirment.swift in Sources */,
 				D78CF1921D27C86A00180A5C /* UserCatalog.swift in Sources */,
 				D70235FB1D1D4E2C001FD0FE /* HumanResource.swift in Sources */,
@@ -409,10 +575,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D70235C31D1D0746001FD0FE /* Main.storyboard */ = {
+		D7D039EC1D292A450080129A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D70235C41D1D0746001FD0FE /* Base */,
+				D7D039ED1D292A450080129A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -506,11 +672,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ERP_Models/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Metanoia.ERP-Models";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ERP_Models-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -518,11 +687,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ERP_Models/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Metanoia.ERP-Models";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ERP_Models-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -618,12 +789,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D70235BE1D1D0746001FD0FE /* ERP_Models.xcdatamodeld */ = {
+		D7D039EF1D292C290080129A /* ERP_Models.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D70235BF1D1D0746001FD0FE /* ERP_Models.xcdatamodel */,
+				D7D039F01D292C290080129A /* ERP_Models.xcdatamodel */,
 			);
-			currentVersion = D70235BF1D1D0746001FD0FE /* ERP_Models.xcdatamodel */;
+			currentVersion = D7D039F01D292C290080129A /* ERP_Models.xcdatamodel */;
 			path = ERP_Models.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

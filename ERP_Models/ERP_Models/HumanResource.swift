@@ -10,5 +10,6 @@ import Cocoa
 
 class HumanResource: QuantitativeResource
 {
+    
 
 }

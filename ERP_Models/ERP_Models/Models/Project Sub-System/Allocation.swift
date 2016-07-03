@@ -9,15 +9,15 @@
 import Cocoa
 
 class Allocation: ProjectResourceRelationship {
-    var releaseTime : String?
+    var releaseTime : NSString?
     var isCurrent : Bool = true
-    var estimatedReleaseTime : String
+    var estimatedReleaseTime : NSString
         {
         get
         {
             let formatter : NSDateFormatter = NSDateFormatter ()
             formatter.dateStyle = .MediumStyle
-            formatter.timeStyle = .ShortStyle
+            formatter.timeStyle = .NoStyle
             let date : NSDate = formatter.dateFromString(createdAt)!
             return formatter.stringFromDate(date.addDays(estimatedUseDuration))
         }
@@ -26,8 +26,20 @@ class Allocation: ProjectResourceRelationship {
     
     func freeResource ()
     {
-        isCurrent = true
-        releaseTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
-        resource.freeResource (fromAllocation: self)
+        if (isCurrent)
+        {
+            releaseTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .NoStyle)
+            resource.freeResource (fromAllocation: self)
+            isCurrent = false
+        }
+    }
+    
+    func getReleaseTime () -> NSString
+    {
+        if isCurrent
+        {
+            return estimatedReleaseTime
+        }
+        return releaseTime!
     }
 }

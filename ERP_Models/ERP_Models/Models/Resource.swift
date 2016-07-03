@@ -14,11 +14,13 @@ class Resource: NSObject {
     private var category : NSString
     var dateAdded : NSString
     var estimatedTimeUse : Int?
+    var name : NSString
     
-    init (category : NSString)
+    init (category : NSString, name : NSString)
     {
-        dateAdded = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        dateAdded = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .NoStyle)
         self.category = category
+        self.name = name
     }
     
     func getIsAvailable () -> Bool
@@ -36,7 +38,7 @@ class Resource: NSObject {
         self.category = category
     }
     
-    func getEstimatedRelease () -> String?
+    func getEstimatedRelease () -> NSString?
     {
         if allocations.count == 0
         {
@@ -44,12 +46,12 @@ class Resource: NSObject {
         }
         let formatter : NSDateFormatter = NSDateFormatter ()
         formatter.dateStyle = .MediumStyle
-        formatter.timeStyle = .ShortStyle
+        formatter.timeStyle = .NoStyle
 
         var bestAllocation : Allocation = allocations[0]
         for allocation in allocations
         {
-            if ((formatter.dateFromString(allocation.estimatedReleaseTime)?.isLessThanDate(formatter.dateFromString(bestAllocation.estimatedReleaseTime)!)) != nil)
+            if (NSDate.stringToDate(bestAllocation.estimatedReleaseTime as String)!.isGreaterThanDate(NSDate.stringToDate(allocation.estimatedReleaseTime as String)!))
             {
                 bestAllocation = allocation
             }

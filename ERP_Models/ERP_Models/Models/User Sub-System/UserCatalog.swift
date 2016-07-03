@@ -52,7 +52,7 @@ class UserCatalog: NSObject {
     {
         if (FindUser(username) != nil)
         {
-            let newUser = User (firstName: firstName, lastName: lastName, username: username, password: password)
+            let newUser = User (withFirstName: firstName, lastName: lastName, username: username, andPassword: password)
             users.append(newUser)
             return newUser
         }
