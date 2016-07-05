@@ -25,7 +25,14 @@ class Resource: NSObject {
     
     func getIsAvailable () -> Bool
     {
-        return allocations.isEmpty
+        for allocation in allocations
+        {
+            if allocation.isCurrent
+            {
+                return false
+            }
+        }
+        return true
     }
     
     func getCategory () -> NSString
@@ -47,13 +54,16 @@ class Resource: NSObject {
         let formatter : NSDateFormatter = NSDateFormatter ()
         formatter.dateStyle = .MediumStyle
         formatter.timeStyle = .NoStyle
-
+        
         var bestAllocation : Allocation = allocations[0]
         for allocation in allocations
         {
-            if (NSDate.stringToDate(bestAllocation.estimatedReleaseTime as String)!.isGreaterThanDate(NSDate.stringToDate(allocation.estimatedReleaseTime as String)!))
+            if (allocation.isCurrent)
             {
-                bestAllocation = allocation
+                if (NSDate.stringToDate(bestAllocation.estimatedReleaseTime as String)!.isGreaterThanDate(NSDate.stringToDate(allocation.estimatedReleaseTime as String)!))
+                {
+                    bestAllocation = allocation
+                }
             }
         }
         return bestAllocation.estimatedReleaseTime
@@ -76,10 +86,7 @@ class Resource: NSObject {
     
     func freeResource (fromAllocation allocation : Allocation)
     {
-        if let index = allocations.indexOf(allocation)
-        {
-            allocations.removeAtIndex(index)
-        }
-    }
 
+    }
+    
 }
