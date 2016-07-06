@@ -1,8 +1,8 @@
 //
-//  InformationResourceCategoriesEntity+CoreDataProperties.swift
+//  CategoriesEntity+CoreDataProperties.swift
 //  ERP_Models
 //
-//  Created by Hossein Azizi on 7/3/16.
+//  Created by Hossein Azizi on 7/6/16.
 //  Copyright © 2016 Hossein Azizi. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,9 +12,8 @@
 import Foundation
 import CoreData
 
-extension InformationResourceCategoriesEntity {
+extension CategoriesEntity {
 
     @NSManaged var category: String?
-    @NSManaged var informationResources: InformationResourceEntity?
 
 }

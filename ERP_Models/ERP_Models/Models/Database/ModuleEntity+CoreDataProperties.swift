@@ -13,7 +13,8 @@ import Foundation
 import CoreData
 
 extension ModuleEntity {
-
+    
+    @NSManaged var myCategory: ModuleCategoriesEntity?
     @NSManaged var moduleDescription: String?
     @NSManaged var creators: NSSet?
     @NSManaged var maintenances: NSSet?

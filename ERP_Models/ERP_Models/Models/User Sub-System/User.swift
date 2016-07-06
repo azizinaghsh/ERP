@@ -8,20 +8,19 @@
 
 import Cocoa
 
-class User: NSObject {    
+class User: StoredNSObject {
     
     var userPermission : Permission
-    
     var firstName, lastName, username, password : NSString
     
-    init (withFirstName firstName : NSString, lastName : NSString, username : NSString, andPassword password : NSString)
+    init (withFirstName firstName : NSString, lastName : NSString, username : NSString, andPassword password : NSString, withEntity entity : UserEntity? = nil)
     {
-        userPermission = PermissionCatalog.getInstance().defaultPermission
+        userPermission = PermissionCatalog.getInstance().defaultPermission!
         self.firstName = firstName
         self.lastName = lastName
         self.username = username
         self.password = password
-        super.init()
+        super.init(UserEntity.self, entity : entity)
     }
     
     func setPermission (permission : Permission)

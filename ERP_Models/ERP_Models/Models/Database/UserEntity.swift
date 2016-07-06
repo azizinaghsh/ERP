@@ -10,8 +10,20 @@ import Foundation
 import CoreData
 
 @objc(UserEntity)
-class UserEntity: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+class UserEntity: Entity {
+    
+    override func setupEntity(object: NSObject)
+    {
+        let user = object as! User
+        self.fname = user.firstName as String
+        self.lname = user.lastName as String
+        self.username = user.username as String
+        self.password = user.password as String
+        self.myPermission = PermissionCatalog.getInstance().getPermissionEntity(withTitle: "Default")
+    }
+    
+    override class func getMyType () -> String
+    {
+        return "User"        
+    }
 }

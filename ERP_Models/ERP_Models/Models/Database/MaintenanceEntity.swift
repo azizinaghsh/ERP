@@ -10,8 +10,17 @@ import Foundation
 import CoreData
 
 
-class MaintenanceEntity: NSManagedObject {
+class MaintenanceEntity: Entity {
 
-// Insert code here to add functionality to your managed object subclass
-
+    override func setupEntity(object: NSObject) {
+        let maintenance = object as! Maintenance
+        self.title = maintenance.title as String
+        self.describe = maintenance.describe as String
+        self.modificationDate = maintenance.modificationDate as String
+    }
+    
+    override class func getMyType () -> String
+    {
+        return "Maintenance"
+    }
 }

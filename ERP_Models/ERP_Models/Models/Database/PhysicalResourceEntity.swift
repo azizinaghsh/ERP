@@ -12,6 +12,18 @@ import CoreData
 
 class PhysicalResourceEntity: ResourceEntity {
 
-// Insert code here to add functionality to your managed object subclass
-
+    override func setupEntity(object: NSObject) {
+        let physicalResource = object as! PhysicalResource
+        self.myCategory = (ResourceCatalog.getInstance().getResourceEntitiesCategoryByName(resourceCategoriesEntityClassName: PhysicalResourceCategoriesEntity.className(), categoryName: (physicalResource.getCategory() as String))) as? PhysicalResourceCategoriesEntity
+        self.estimatedTimeUse = physicalResource.estimatedTimeUse
+        self.name = physicalResource.name as String
+        self.dateAdded = physicalResource.dateAdded as String
+        self.roomNumber = physicalResource.roomNumber
+        self.resourceCode = physicalResource.physicalResourceCode as String
+    }
+    
+    override class func getMyType () -> String
+    {
+        return "PhysicalResource"
+    }
 }

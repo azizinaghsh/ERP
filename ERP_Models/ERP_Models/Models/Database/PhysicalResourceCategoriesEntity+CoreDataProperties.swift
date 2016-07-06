@@ -14,7 +14,6 @@ import CoreData
 
 extension PhysicalResourceCategoriesEntity {
 
-    @NSManaged var category: String?
     @NSManaged var physicalResources: PhysicalResourceEntity?
 
 }

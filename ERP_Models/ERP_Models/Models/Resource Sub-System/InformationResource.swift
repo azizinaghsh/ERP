@@ -9,5 +9,7 @@
 import Cocoa
 
 class InformationResource: Resource {
-
+    override init<T where T : ResourceEntity>(category: NSString, name: NSString, type: T.Type, entity: NSManagedObject? = nil) {
+        super.init(category: category, name: name, type: type, entity: entity)
+    }
 }

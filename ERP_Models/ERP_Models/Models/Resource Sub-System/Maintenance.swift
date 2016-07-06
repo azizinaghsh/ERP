@@ -8,13 +8,13 @@
 
 import Cocoa
 
-class Maintenance: NSObject {
+class Maintenance: StoredNSObject {
     var maintainers : Array<HumanResource> = []
     var describe : NSString = ""
     var modificationDate : NSString
     var title : NSString
     
-    init (title : NSString, maintainersAre maintainers : [HumanResource], descriptionIs description: NSString, modificationDateIs date:NSString?)
+    init (title : NSString, maintainersAre maintainers : [HumanResource], descriptionIs description: NSString, modificationDateIs date:NSString?, entity: NSManagedObject? = nil)
     {
         self.maintainers = maintainers
         self.title = title
@@ -27,6 +27,7 @@ class Maintenance: NSObject {
         {
             self.modificationDate = date!
         }
+        super.init(MaintenanceEntity.self, entity: entity)
     }
     
     func SetModificationDate (setTo date:String)

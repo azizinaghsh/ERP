@@ -1,5 +1,5 @@
 //
-//  InformationResourceEntity+CoreDataProperties.swift
+//  ModuleCategoriesEntity+CoreDataProperties.swift
 //  ERP_Models
 //
 //  Created by Hossein Azizi on 7/3/16.
@@ -12,8 +12,7 @@
 import Foundation
 import CoreData
 
-extension InformationResourceEntity {
-
-    @NSManaged var myCategory: ModuleResourceCategoriesEntity?
-
+extension ModuleCategoriesEntity
+{
+    @NSManaged var modules: Module?
 }

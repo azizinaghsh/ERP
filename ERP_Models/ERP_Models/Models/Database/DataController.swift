@@ -7,13 +7,24 @@
 //
 
 import CoreData
+import Cocoa
+
 class DataController: NSObject {
     
     private static var instance : DataController?
     
-    var managedObjectContext: NSManagedObjectContext
+    //var managedObjectContext: NSManagedObjectContext
+    var managedObjectContext : NSManagedObjectContext
+    {
+        get
+        {
+           return (NSApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+            
+        }
+    }
     private override init() {
-        // This resource is the same name as your xcdatamodeld contained in your project.
+        super.init()
+        /*// This resource is the same name as your xcdatamodeld contained in your project.
         guard let modelURL = NSBundle.mainBundle().URLForResource("ERP_Models", withExtension:"momd") else {
             fatalError("Error loading model from bundle")
         }
@@ -38,7 +49,7 @@ class DataController: NSObject {
             } catch {
                 fatalError("Error migrating store: \(error)")
             }
-        }
+        }*/
     }
     
     static func getInstance () -> DataController

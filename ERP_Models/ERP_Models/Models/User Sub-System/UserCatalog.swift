@@ -11,6 +11,8 @@ import Cocoa
 class UserCatalog: NSObject {
     
     var users : Array<User> = []
+    var userEntities : Array<UserEntity> = []
+    var entitiesFetched : Bool = false
     
     static var instance : UserCatalog?
     
@@ -26,6 +28,10 @@ class UserCatalog: NSObject {
         if (instance == nil)
         {
             instance = UserCatalog ()
+        }
+        if (!instance!.entitiesFetched)
+        {
+            instance!.fetchUsersFromDatabase()
         }
         return instance!
     }
@@ -50,7 +56,7 @@ class UserCatalog: NSObject {
     
     func addUser (withFirstName firstName : NSString, lastName : NSString, andUserName username : NSString, withPassword password : NSString) -> User?
     {
-        if (FindUser(username) != nil)
+        if (FindUser(username) == nil)
         {
             let newUser = User (withFirstName: firstName, lastName: lastName, username: username, andPassword: password)
             users.append(newUser)
@@ -79,5 +85,40 @@ class UserCatalog: NSObject {
             }
         }
         return nil
+    }
+    
+    func FindUserEntity (username : String) -> UserEntity?
+    {
+        for user in userEntities
+        {
+            if user.username == username
+            {
+                return user
+            }
+        }
+        return nil
+    }
+    
+    func fetchUsersFromDatabase () -> Array<User>
+    {
+        let moc = DataController.getInstance().managedObjectContext
+        let usersFetch = NSFetchRequest(entityName: "User")
+        do
+        {
+            userEntities = try moc.executeFetchRequest(usersFetch) as! Array<UserEntity>
+            for userEntity in userEntities
+            {
+                let newUser = addUser(withFirstName: userEntity.fname!, lastName: userEntity.lname!, andUserName: userEntity.username!, withPassword: userEntity.password!)
+                newUser?.setPermission(PermissionCatalog.getInstance().getPermission(withTitle: userEntity.myPermission!.title!)!)
+                
+            }
+            
+        } catch
+        {
+            fatalError("Failed to fetch users: \(error)")
+        }
+        entitiesFetched = true
+        
+        return users
     }
 }

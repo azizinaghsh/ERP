@@ -10,8 +10,10 @@ import Foundation
 import CoreData
 
 
-class PhysicalResourceCategoriesEntity: NSManagedObject {
+class PhysicalResourceCategoriesEntity: CategoriesEntity {
 
-// Insert code here to add functionality to your managed object subclass
-
+    override class func getMyType () -> (String, String)
+    {
+        return ("PhysicalResourceCategories", PhysicalResourceCategoriesEntity.className())
+    }
 }

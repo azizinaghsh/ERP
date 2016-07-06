@@ -14,7 +14,6 @@ import CoreData
 
 extension FinancialResourceCategoriesEntity {
 
-    @NSManaged var category: String?
     @NSManaged var financialResources: NSSet?
 
 }

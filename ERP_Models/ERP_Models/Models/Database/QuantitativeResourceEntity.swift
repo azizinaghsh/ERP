@@ -11,7 +11,5 @@ import CoreData
 
 
 class QuantitativeResourceEntity: ResourceEntity {
-
-// Insert code here to add functionality to your managed object subclass
-
+    
 }

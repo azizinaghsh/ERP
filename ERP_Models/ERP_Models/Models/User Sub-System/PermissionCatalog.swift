@@ -11,35 +11,94 @@ import Cocoa
 class PermissionCatalog: NSObject {
     
     var permissions : Array<Permission> = []
+    var permissionEntities : Array<PermissionEntity> = []
+    private var entitiesFetched : Bool = false
     private static var instance : PermissionCatalog?
     
-    let defaultPermission : Permission
+    var defaultPermission : Permission?
     
-    let PERMISSION_CREATE_PROJECT : String = "create_project"
-    let PERMISSION_CREATE_USER :String = "create_project"
-    let PERMISSION_CREATE_PERMISSION : String = "create_permission"
-    let PERMISSION_ALLOCATE_RESOURCE : String = "allocate_permission"
     
-    private override init ()
+    func addDefaultPermissionToDatabase ()
     {
-        defaultPermission = Permission ()
-        super.init()
+        let moc = DataController.getInstance().managedObjectContext
+        let permissionFetch = NSFetchRequest (entityName: "Permission")
+        var found = false
+        do
+        {
+            let fetchedPermission = try moc.executeFetchRequest(permissionFetch)
+            for permission in fetchedPermission
+            {
+                if (permission.title! == "Default")
+                {
+                    found = true
+                }
+            }
+        }
+        catch
+        {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+        if (!found)
+        {
+            let permissionEntity = NSEntityDescription.insertNewObjectForEntityForName("Permission", inManagedObjectContext: moc) as! PermissionEntity
+            permissionEntity.setupEntity(defaultPermission!)
+            do
+            {
+                try moc.save()
+            }
+            catch
+            {
+                fatalError("Failed to save Dafault permission: \(error)")
+            }
+            
+        }
     }
+    
     
     static func getInstance () -> PermissionCatalog
     {
         if (instance == nil)
         {
             instance = PermissionCatalog ()
+            instance!.defaultPermission = instance!.createPermission(permissionTitle: "Default", canCreateProject: false, canCreateUser: false, canCreateRequriement: false, canCreateResource: false, canCreatePermission: false)
+
+        }
+        if (!instance!.entitiesFetched)
+        {
+            instance?.fetchPermissionsFromDatabase()
         }
         return instance!
     }
     
-    func createPermission () -> Permission
+    func createPermission (permissionTitle title : NSString, canCreateProject : Bool, canCreateUser : Bool, canCreateRequriement : Bool, canCreateResource : Bool, canCreatePermission : Bool, permissionEntity : PermissionEntity? = nil) -> Permission
     {
-        let newPermission = Permission ()
+        let newPermission = Permission (permissionTitle: title, canCreateProject: canCreateProject, canCreateUser: canCreateUser, canCreateRequriement: canCreateRequriement, canCreateResource: canCreateResource, canCreatePermission: canCreatePermission, permissionEntity: permissionEntity)
         permissions.append(newPermission)
         return newPermission
+    }
+    
+    func getPermissionEntity (withTitle title : NSString) -> PermissionEntity?
+    {
+        for permission in permissionEntities
+        {
+            if permission.title == title
+            {
+                return permission
+            }
+        }
+        return nil
+    }
+    
+    func getPermission (withTitle title : NSString) -> Permission?
+    {
+        for permission in permissions
+        {
+            if permission.title == title
+            {
+                return permission
+            }
+        }
+        return nil
     }
     
     func removePermission (permission : Permission) -> Bool
@@ -50,6 +109,27 @@ class PermissionCatalog: NSObject {
             return true
         }
         return false
+    }
+    
+    func fetchPermissionsFromDatabase () -> [Permission]
+    {
+        let moc = DataController.getInstance().managedObjectContext
+
+        let PermissionsFetch = NSFetchRequest(entityName: "Permission")
+        do
+        {
+            permissionEntities = try moc.executeFetchRequest(PermissionsFetch) as! [PermissionEntity]
+            permissions = []
+            for permissionEntity in permissionEntities
+            {
+                createPermission(permissionTitle: permissionEntity.title!, canCreateProject: permissionEntity.can_create_project == 1, canCreateUser : permissionEntity.can_create_user == 1, canCreateRequriement : permissionEntity.can_create_requirement == 1, canCreateResource : permissionEntity.can_create_resource == 1, canCreatePermission : false, permissionEntity : permissionEntity)
+            }
+        } catch
+        {
+            fatalError("Failed to fetch permissions: \(error)")
+        }
+        entitiesFetched = true
+        return permissions
     }
     
 }

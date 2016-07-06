@@ -10,6 +10,8 @@ import Cocoa
 
 class FinancialResource: QuantitativeResource
 {
-    
+    init(name: NSString, totalAmount: Int, category: String, entity: NSManagedObject? = nil) {
+        super.init(name: name, totalAmount: totalAmount, category: category, type: FinancialResourceEntity.self, entity: entity)
+    }
 
 }

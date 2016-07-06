@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Resource: NSObject {
+class Resource: StoredNSObject {
     
     private var allocations : [Allocation] = []
     private var category : NSString
@@ -16,11 +16,12 @@ class Resource: NSObject {
     var estimatedTimeUse : Int?
     var name : NSString
     
-    init (category : NSString, name : NSString)
+    init<T where T: ResourceEntity> (category : NSString, name : NSString, type : T.Type, entity: NSManagedObject? = nil)
     {
         dateAdded = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .NoStyle)
         self.category = category
         self.name = name
+        super.init(type, entity: entity)
     }
     
     func getIsAvailable () -> Bool

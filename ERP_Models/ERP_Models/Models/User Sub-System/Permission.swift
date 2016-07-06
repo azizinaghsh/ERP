@@ -8,42 +8,23 @@
 
 import Cocoa
 
-class Permission: NSObject {
+class Permission: StoredNSObject {
     var permittedActions : Set<NSString> = []
-    var title : String = ""
+    var title : NSString = ""
     
-    func addPermittedAction (actions : NSString...)
+    var canCreateProject, canCreateResource, canCreateRequriement, canCreatePermission, canCreateUser : Bool
+    
+    init (permissionTitle title : NSString, canCreateProject : Bool, canCreateUser : Bool, canCreateRequriement : Bool, canCreateResource : Bool, canCreatePermission : Bool, permissionEntity : PermissionEntity? = nil)
     {
-        for action in actions
-        {
-            permittedActions.insert(action)
-        }
+        self.title = title
+        self.canCreateProject = canCreateProject
+        self.canCreateUser = canCreateUser
+        self.canCreateRequriement = canCreateRequriement
+        self.canCreatePermission = canCreatePermission
+        self.canCreateResource = canCreateResource
+        super.init(PermissionEntity.self, entity: permissionEntity)
     }
     
-    func removePermittedAction (actions : NSString...) -> Bool
-    {
-        var result : Bool = true
-        for action in actions
-        {
-            result = result && (true ? permittedActions.remove(action) != nil : false)
-        }
-        return result
-    }
-    
-    func togglePermittedAction (actions : NSString...)
-    {
-        for action in actions
-        {
-            if (getIsPermitted(action))
-            {
-                removePermittedAction(action)
-            }
-            else
-            {
-                addPermittedAction(action)
-            }
-        }
-    }
     
     func getIsPermitted (action : NSString) -> Bool
     {

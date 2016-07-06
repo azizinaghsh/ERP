@@ -14,7 +14,6 @@ import CoreData
 
 extension HumanResourceCategoriesEntity {
 
-    @NSManaged var category: String?
     @NSManaged var humanResources: NSSet?
 
 }

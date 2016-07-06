@@ -10,8 +10,7 @@ import Foundation
 import CoreData
 
 
-class ResourceEntity: NSManagedObject {
+class ResourceEntity: Entity {
 
-// Insert code here to add functionality to your managed object subclass
 
 }

@@ -10,8 +10,10 @@ import Foundation
 import CoreData
 
 
-class HumanResourceCategoriesEntity: NSManagedObject {
+class HumanResourceCategoriesEntity: CategoriesEntity {
 
-// Insert code here to add functionality to your managed object subclass
-
+    override class func getMyType () -> (String, String)
+    {
+        return ("HumanResourceCategories", HumanResourceCategoriesEntity.className())
+    }
 }
